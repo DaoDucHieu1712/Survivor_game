@@ -1,18 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+	
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+		//#region Zenject
+
+		//private SaveLoadSystem saveLoadSystem;
+
+		//#endregion
+		//[Inject]
+		//private void Construct(SaveLoadSystem system)
+		//{
+		//	this.saveLoadSystem = system;
+		//}
+		/// <summary>
+		/// Load level.
+		/// </summary>
+		public void NewGame()
+		{
+			SceneManager.LoadScene("GameScene", LoadSceneMode.Single);
+		}
+
+		/// <summary>
+		/// Close application.
+		/// </summary>
+		public void Quit()
+		{
+			Application.Quit();
+		}
+	
 }
