@@ -27,7 +27,6 @@ public class PlayerController : MonoBehaviour
     {
        
 
-
         if (Time.time >= nextSpawnTime)
         {
             GameObject bullet = Instantiate(prefabBullet, transform.position, transform.rotation);
@@ -37,46 +36,4 @@ public class PlayerController : MonoBehaviour
             nextSpawnTime = Time.time + spawnDelay;
         }
     }
-
-   
-
-    public void OnTriggerEnter2D(Collider2D collision)
-    {
-        //if (collision.gameObject.CompareTag("Bat"))
-        //{
-        //    hp = hp - 1;
-        //}
-
-        //if (collision.gameObject.CompareTag("Flower"))
-        //{
-        //    hp = hp - 1;
-        //}
-
-        //if (collision.gameObject.CompareTag("Evil"))
-        //{
-        //    hp = hp - 1;
-        //}
-
-        //if (collision.gameObject.CompareTag("FlowerAmount"))
-        //{
-        //    hp = hp - 1;
-        //}
-
-        //if (collision.gameObject.CompareTag("EvilAmount"))
-        //{
-        //    hp = hp - 1;
-        //}
-
-        //if (collision.gameObject.CompareTag("Exp"))
-        //{
-        //    exp = exp + 1;
-        //}
-
-        //if (collision.gameObject.CompareTag("HP"))
-        //{
-        //    hp = hp + 1;
-        //}
-
-    }
-
 }
