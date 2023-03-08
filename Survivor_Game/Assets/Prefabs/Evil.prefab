@@ -10,6 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6887357566755044817}
   - component: {fileID: 1705374121276388489}
+  - component: {fileID: -3124049795197070087}
+  - component: {fileID: -7348778819758166881}
+  - component: {fileID: 1034011911087995727}
   m_Layer: 0
   m_Name: Evil
   m_TagString: Untagged
@@ -85,6 +88,71 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-3124049795197070087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5943239034736164013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4e337d6d1543cd41ba5044e74f4aa87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamage: 5
+  attackRange: 2
+  attackRate: 1
+  attackCooldown: 0
+  moveSpeed: 2
+  player: {fileID: 0}
+--- !u!61 &-7348778819758166881
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5943239034736164013}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.4, y: 0.46}
+    newSize: {x: 0.4, y: 0.46}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.4, y: 0.46}
+  m_EdgeRadius: 0
+--- !u!50 &1034011911087995727
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5943239034736164013}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &7405409163466284296
 GameObject:
   m_ObjectHideFlags: 0
