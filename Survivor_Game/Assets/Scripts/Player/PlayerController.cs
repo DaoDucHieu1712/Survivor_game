@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         playerInfo = FindObjectOfType<PlayerInfomation>();
-        weapon = new Weapon(DanThuong, 2, 0.2f, 2f);
+        weapon = new Weapon(DanNo, 2, 1f, 2f);
         SetProperty(weapon);
     }
 
@@ -72,5 +72,10 @@ public class PlayerController : MonoBehaviour
                 SetProperty(weapon);
                 break;
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log(collision.tag);
     }
 }

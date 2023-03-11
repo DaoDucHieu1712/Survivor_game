@@ -481,10 +481,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c6f1e0a37c04194292e8fcc864eebc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DanThuong: {fileID: 0}
-  DanNo: {fileID: 0}
-  DanXuyen: {fileID: 0}
-  DanUltimate: {fileID: 0}
+  DanThuong: {fileID: 8622149321135767779, guid: ea58fa842e694d94cbde548e7eb83d9e, type: 3}
+  DanNo: {fileID: 1266805463358543808, guid: 6459758d7d3a13a49bedb36ebf8d93fa, type: 3}
+  DanXuyen: {fileID: 1266805463358543808, guid: 6459758d7d3a13a49bedb36ebf8d93fa, type: 3}
+  DanUltimate: {fileID: 1266805463358543808, guid: 6459758d7d3a13a49bedb36ebf8d93fa, type: 3}
   bulletSpeed: 10
   spawnDelay: 1
 --- !u!50 &307515752
