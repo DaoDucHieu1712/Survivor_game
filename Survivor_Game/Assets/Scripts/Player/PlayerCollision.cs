@@ -8,41 +8,41 @@ public class PlayerCollision : MonoBehaviour
     GameObject player;
     PlayerInfomation pl;
 
-   
+
     private void Start()
     {
-       pl = GetComponent<PlayerInfomation>();
-		
-	}
+        pl = GetComponent<PlayerInfomation>();
+
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //if (collision.gameObject.CompareTag("Bat"))
         //{
-           
+
         //}
 
         if (collision.gameObject.CompareTag("Flower"))
         {
-			FlowerProperti flower = collision.gameObject.GetComponent<FlowerProperti>();
-			if (flower != null)
-			{
-				flower.TakeDamage(2);
-			}
-		}
+            FlowerProperti flower = collision.gameObject.GetComponent<FlowerProperti>();
+            if (flower != null)
+            {
+                flower.TakeDamage(2);
+            }
+        }
 
         //if (collision.gameObject.CompareTag("Evil"))
         //{
-            
+
         //}
 
         //if (collision.gameObject.CompareTag("FlowerAmount"))
         //{
-            
+
         //}
 
         //if (collision.gameObject.CompareTag("EvilAmount"))
         //{
-            
+
         //}
 
         //if (collision.gameObject.CompareTag("Exp"))
@@ -54,5 +54,5 @@ public class PlayerCollision : MonoBehaviour
         //{
         //    pl.Hp += 1;
         //}
-
+    } 
 }
