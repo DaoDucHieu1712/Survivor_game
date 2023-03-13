@@ -11,7 +11,7 @@ public class FlowerProperti : MonoBehaviour
 
 	public int maxHealth = 20;
 	public int currentHealth;
-
+	public int damage = 5;
 	public HealthBar healthBar;
 
 	// Start is called before the first frame update
@@ -24,10 +24,7 @@ public class FlowerProperti : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		//if (Input.GetKeyDown(KeyCode.Space))
-		//{
-		//	TakeDamage(2);
-		//}
+	
 	}
 
 	public void TakeDamage(int damage)
