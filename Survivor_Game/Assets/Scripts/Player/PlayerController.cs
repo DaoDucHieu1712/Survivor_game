@@ -6,38 +6,40 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public GameObject DanThuong;
+    public GameObject DanNo;
+    public GameObject DanXuyen;
+    public GameObject DanUltimate;
 
-    public GameObject prefabBullet;
-   
-    public float speed = 10f;
+    Weapon weapon = null;
 
-    public float bulletSpeed = 10f;
-    public float spawnDelay = 1f;
+    public float bulletSpeed;
+    public float spawnDelay;
     private float nextSpawnTime;
+    PlayerInfomation playerInfo;
 
-
+    GameObject prefabBullet;
 
     // Start is called before the first frame update
     void Start()
     {
+        playerInfo = FindObjectOfType<PlayerInfomation>();
+        weapon = new Weapon(DanThuong, 2, 0.2f, 2f);
+        SetProperty(weapon);
     }
 
     // Update is called once per frame
     void Update()
     {
-       
-
         if (Time.time >= nextSpawnTime)
         {
             GameObject bullet = Instantiate(prefabBullet, transform.position, transform.rotation);
             Rigidbody2D bulletRigidbody = bullet.GetComponent<Rigidbody2D>();
-
             bulletRigidbody.AddForce(transform.up * bulletSpeed, ForceMode2D.Impulse);
             nextSpawnTime = Time.time + spawnDelay;
         }
     }
-<<<<<<< Updated upstream
-=======
+
 
     void SetProperty(Weapon weapon)
     {
@@ -45,6 +47,7 @@ public class PlayerController : MonoBehaviour
         bulletSpeed = weapon.Speed;
         spawnDelay = weapon.SpawnDelay;
     }
+
 
     //public void ChangeWeapon(int skill)
     //{
@@ -72,5 +75,6 @@ public class PlayerController : MonoBehaviour
     //            break;
     //    }
     //}
->>>>>>> Stashed changes
+
+
 }

@@ -7,6 +7,7 @@ public class PlayerCollision : MonoBehaviour
 
     GameObject player;
     PlayerInfomation pl;
+
    
     private void Start()
     {
@@ -53,5 +54,5 @@ public class PlayerCollision : MonoBehaviour
         //{
         //    pl.Hp += 1;
         //}
-    }
+
 }

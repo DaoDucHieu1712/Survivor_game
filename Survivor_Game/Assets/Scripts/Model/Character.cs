@@ -9,7 +9,5 @@ namespace Assets.Scripts.Model {
         public int Dame { get; set; }
         public int HP { get; set; }
         public int Speed { get; set; }
-
-
     }
 }

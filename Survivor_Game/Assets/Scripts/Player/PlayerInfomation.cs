@@ -4,61 +4,41 @@ using UnityEngine;
 
 public class PlayerInfomation : MonoBehaviour
 {
-    public float lv;
-    public float hp = 50f;
-    public float dame = 10f;
+    float lv = 1;
+    float hp = 50f;
+    float dame = 10f;
     float exp = 0;
     float m_exp = 100;
 
+    public delegate void LevelChangedEventHandler(float newLevel);
+    public event LevelChangedEventHandler LevelChanged;
+
+    public float Lv { get => lv;
+        set {
+            lv = value;
+            if (LevelChanged != null)
+            {
+                LevelChanged(lv);
+            }
+        }  
+    }
+    public float Hp { get => hp; set => hp = value; }
+    public float Dame { get => dame; set => dame = value; }
+    public float Exp { get => exp; set => exp = value; }
+    public float Exp1 { get => m_exp; set => m_exp = value; }
+
     public void Update()
     {   
-        if (exp >= m_exp)
+        if (Exp >= Exp1)
         {
-            lv++;
-            m_exp = m_exp * 1.2f;
-            dame = dame * 1.2f;
+            Lv++;
+            Exp1 = Exp1 * 1.2f;
+            Dame = Dame * 1.2f;
         }
-        if(hp == 0)
+        if(Hp == 0)
         {
             //Game over
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Bat"))
-        {
-            hp = hp - 1;
-        }
-
-        if (collision.gameObject.CompareTag("Flower"))
-        {
-            hp = hp - 1;
-        }
-
-        if (collision.gameObject.CompareTag("Evil"))
-        {
-            hp = hp - 1;
-        }
-
-        if (collision.gameObject.CompareTag("FlowerAmount"))
-        {
-            hp = hp - 1;
-        }
-
-        if (collision.gameObject.CompareTag("EvilAmount"))
-        {
-            hp = hp - 1;
-        }
-
-        if (collision.gameObject.CompareTag("Exp"))
-        {
-            exp = exp + 1;
-        }
-
-        if (collision.gameObject.CompareTag("HP"))
-        {
-            hp = hp + 1;
-        }
-    }
 }
