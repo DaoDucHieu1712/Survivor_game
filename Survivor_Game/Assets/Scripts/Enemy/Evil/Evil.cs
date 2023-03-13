@@ -5,7 +5,7 @@ using UnityEngine;
 public class Evil : MonoBehaviour
 {
     public int attackDamage = 4;
-    public float attackRange = 4f;
+    public float attackRange = 3f;
     public float attackRate = 1f;
     public float attackCooldown = 0f;
     public float moveSpeed = 2f;
