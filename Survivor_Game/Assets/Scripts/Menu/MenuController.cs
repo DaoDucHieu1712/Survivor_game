@@ -19,10 +19,10 @@ public class MenuController : MonoBehaviour
 		//}
 		/// <summary>
 		/// Load level.
-		/// </summary>
+		/// </summary>s
 		public void NewGame()
 		{
-			SceneManager.LoadScene("GameScene", LoadSceneMode.Single);
+			SceneManager.LoadScene("Scenes", LoadSceneMode.Single);
 		}
 
 		/// <summary>

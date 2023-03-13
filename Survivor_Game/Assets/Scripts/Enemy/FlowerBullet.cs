@@ -25,7 +25,13 @@ public class FlowerBullet : MonoBehaviour
         if (collision.gameObject.name.Equals("Player"))
         {
             Debug.Log("Hit");
-            Destroy(gameObject);
+			PlayerInfomation player = collision.gameObject.GetComponent<PlayerInfomation>();
+			FlowerProperti flower = collision.gameObject.GetComponent<FlowerProperti>();
+			
+			
+				player.TakeDamage(5);
+			
+			Destroy(gameObject);
 
         }
 	}

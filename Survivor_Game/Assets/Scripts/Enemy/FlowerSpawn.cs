@@ -45,8 +45,18 @@ public class FlowerSpawn : MonoBehaviour
 
 		// Instantiate the prefabTarget at targetPos
 		GameObject newPrefabTarget = Instantiate(prefabTarget, targetPos, Quaternion.identity);
+		//// Get the current level of the player
+		//float playerLevel = player.GetComponent<PlayerInfomation>().Lv;
 
-		
+		//// Increase the health of the new target based on the player level
+		//int targetHealth = 20 + (int)playerLevel * 2;
+		//newPrefabTarget.GetComponent<FlowerProperti>().maxHealth = targetHealth;
+		//newPrefabTarget.GetComponent<FlowerProperti>().currentHealth = targetHealth;
+
+		//// Increase the damage of the new target based on the player level
+		//int targetDamage = 1 + (int)playerLevel;
+		//newPrefabTarget.GetComponent<FlowerProperti>().damage = targetDamage;
+
 		// Start a coroutine to move the prefabTarget towards the player after 3 seconds
 		StartCoroutine(MoveToPlayer(newPrefabTarget));
 
@@ -54,64 +64,25 @@ public class FlowerSpawn : MonoBehaviour
 		
 	}
 
-	//private IEnumerator MoveToPlayer(GameObject target)
-	//{
-	//	yield return new WaitForSeconds(3f); // Wait for 3 seconds
 
-	//	Vector3 prevPlayerPos = player.transform.position;
-	//	Vector3 dirToPlayer = (prevPlayerPos - target.transform.position).normalized;
-	//	bool isMovingToPlayer = true;
-
-	//	while (true)
-	//	{
-	//		Vector3 currPlayerPos = player.transform.position;
-	//		float distToPlayer = Vector3.Distance(target.transform.position, currPlayerPos);
-
-	//		if (isMovingToPlayer)
-	//		{
-	//			// If the target is moving towards the player, check if it has reached the desired distance
-	//			if (distToPlayer <= 4f)
-	//			{
-	//				// Stop moving and freeze in the current position
-	//				target.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
-	//				isMovingToPlayer = false;
-	//				yield return new WaitForSeconds(3f); // Wait for 3 seconds before moving again
-	//			}
-	//			else
-	//			{
-	//				// Set the velocity of the prefabTarget Rigidbody to move towards the player
-	//				target.GetComponent<Rigidbody2D>().velocity = dirToPlayer * moveSpeed;
-	//			}
-	//		}
-	//		else
-	//		{
-	//			// If the target is frozen, check if the player has moved more than 2 units away from its previous position
-	//			float distMoved = Vector3.Distance(prevPlayerPos, currPlayerPos);
-	//			if (distMoved >= 3f)
-	//			{
-	//				// Calculate the direction towards the player's new position
-	//				dirToPlayer = (currPlayerPos - target.transform.position).normalized;
-	//				isMovingToPlayer = true;
-	//			}
-	//		}
-
-	//		yield return null;
-	//	}
-	//}
 
 	private IEnumerator MoveToPlayer(GameObject target)
 	{
 		yield return new WaitForSeconds(3f); // Wait for 3 seconds
 
 		Vector3 prevPlayerPos = player.transform.position;
-		Vector3 dirToPlayer = (prevPlayerPos - target.transform.position).normalized;
 		bool isMovingToPlayer = true;
 
 		while (true)
 		{
-			if (target == null) break; // Check if the target GameObject has been destroyed
-
 			Vector3 currPlayerPos = player.transform.position;
+
+			// Check if the target object has been destroyed before accessing its position
+			if (target == null)
+			{
+				break;
+			}
+
 			float distToPlayer = Vector3.Distance(target.transform.position, currPlayerPos);
 
 			if (isMovingToPlayer)
@@ -127,6 +98,7 @@ public class FlowerSpawn : MonoBehaviour
 				else
 				{
 					// Set the velocity of the prefabTarget Rigidbody to move towards the player
+					Vector3 dirToPlayer = (currPlayerPos - target.transform.position).normalized;
 					target.GetComponent<Rigidbody2D>().velocity = dirToPlayer * moveSpeed;
 				}
 			}
@@ -137,7 +109,7 @@ public class FlowerSpawn : MonoBehaviour
 				if (distMoved >= 3f)
 				{
 					// Calculate the direction towards the player's new position
-					dirToPlayer = (currPlayerPos - target.transform.position).normalized;
+					Vector3 dirToPlayer = (currPlayerPos - target.transform.position).normalized;
 					isMovingToPlayer = true;
 				}
 			}

@@ -20,5 +20,7 @@ namespace Assets.Scripts.Model {
             SpawnDelay = spawnDelay;
             Speed = speed;
         }
+
+
     }
 }
