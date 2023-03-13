@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Flower
+  - DanThuong
+  - DanNo
+  - DanXuyen
   layers:
   - Default
   - TransparentFX

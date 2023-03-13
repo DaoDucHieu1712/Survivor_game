@@ -466,7 +466,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DanThuong: {fileID: 8622149321135767779, guid: ea58fa842e694d94cbde548e7eb83d9e, type: 3}
   DanNo: {fileID: 1266805463358543808, guid: 6459758d7d3a13a49bedb36ebf8d93fa, type: 3}
-  DanXuyen: {fileID: 1266805463358543808, guid: 6459758d7d3a13a49bedb36ebf8d93fa, type: 3}
+  DanXuyen: {fileID: 37476327413953219, guid: 42be5a98e86845643bea4936796f4c53, type: 3}
   DanUltimate: {fileID: 1266805463358543808, guid: 6459758d7d3a13a49bedb36ebf8d93fa, type: 3}
   bulletSpeed: 10
   spawnDelay: 1

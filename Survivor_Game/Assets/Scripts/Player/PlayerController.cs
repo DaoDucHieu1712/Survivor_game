@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         playerInfo = FindObjectOfType<PlayerInfomation>();
-        weapon = new Weapon(DanNo, 2, 1f, 2f);
+        weapon = new Weapon(DanXuyen, 2, 1f, 2f);
         SetProperty(weapon);
     }
 
