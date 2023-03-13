@@ -30,10 +30,14 @@ public class PlayerCollision : MonoBehaviour
             }
         }
 
-        //if (collision.gameObject.CompareTag("Evil"))
-        //{
-
-        //}
+        if (collision.gameObject.CompareTag("Evil"))
+        {
+            EvilProperty evil = collision.gameObject.GetComponent<EvilProperty>();
+            if (evil != null)
+            {
+                evil.TakeDamage(3); 
+            }
+        }
 
         //if (collision.gameObject.CompareTag("FlowerAmount"))
         //{

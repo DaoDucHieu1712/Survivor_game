@@ -7,7 +7,7 @@ public class EvilProperty : MonoBehaviour
     public int maxHealth = 30;
     public int currentHealth;
 
-    public HealthBar healthBar;
+    public EvilHealthBar healthBar;
 
     // Start is called before the first frame update
     void Start()
@@ -19,16 +19,17 @@ public class EvilProperty : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            TakeDamage(3);
-        }
+       
     }
 
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         currentHealth -= damage;
 
         healthBar.SetHealth(currentHealth);
+        if (currentHealth <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }
