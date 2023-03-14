@@ -7,23 +7,23 @@ public class HPSpawner : MonoBehaviour
 
 
     public GameObject hp;
-    TimerOther timer;
+    public float timer;
+    float m_timer = 0;
     // Start is called before the first frame update
     void Start()
     {
-        timer = GetComponent<TimerOther>();
-        timer.alarmTime = 2;
-        timer.StartTime();
+        m_timer = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (timer.isFinish)
+        m_timer -= Time.deltaTime;
+        if (m_timer <= 0)
         {
             Spawn();
+            m_timer = timer;
         }
-        timer.StartTime();
     }
 
     public void Spawn()

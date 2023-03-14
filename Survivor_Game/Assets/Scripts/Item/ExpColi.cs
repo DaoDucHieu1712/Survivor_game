@@ -2,22 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerCollision : MonoBehaviour
+public class ExpColi : MonoBehaviour
 {
-
     PlayerInfomation pl;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Hp"))
+        if (collision.gameObject.CompareTag("Exp"))
         {
-            Debug.Log("An Hp");
             pl = collision.gameObject.GetComponent<PlayerInfomation>();
-            if(pl.currentHealth < pl.Hp)
+            if (pl.currentHealth < pl.Hp)
             {
-                pl.EatHP(10);
+                pl.EatHP(15);
             }
             Destroy(collision.gameObject);
         }
-    } 
+    }
 }

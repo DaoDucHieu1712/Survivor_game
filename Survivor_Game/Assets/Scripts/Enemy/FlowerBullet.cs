@@ -28,8 +28,10 @@ public class FlowerBullet : MonoBehaviour
 			PlayerInfomation player = collision.gameObject.GetComponent<PlayerInfomation>();
 			FlowerProperti flower = collision.gameObject.GetComponent<FlowerProperti>();
 			
-			
-				player.TakeDamage(5);
+			if(player.currentHealth > 0)
+            {
+			player.TakeDamage(5);
+            }
 			
 			Destroy(gameObject);
 
