@@ -8,7 +8,7 @@ public class PlayerInfomation : MonoBehaviour
     int hp = 50;
     int dame = 10;
     float exp = 0;
-    float m_exp = 100;
+    float maxExp = 100;
 	public int currentHealth;
 	public HealthBar healthBar;
 
@@ -27,7 +27,7 @@ public class PlayerInfomation : MonoBehaviour
     public float Hp { get => hp; set => hp = (int)value; }
     public float Dame { get => dame; set => dame = (int)value; }
     public float Exp { get => exp; set => exp = value; }
-    public float Exp1 { get => m_exp; set => m_exp = value; }
+    public float MaxExp { get => maxExp; set => maxExp = value; }
 	void Start()
 	{
 		currentHealth = hp;
@@ -36,10 +36,10 @@ public class PlayerInfomation : MonoBehaviour
 
 	public void Update()
     {   
-        if (Exp >= Exp1)
+        if (Exp >= MaxExp)
         {
             Lv++;
-            Exp1 = Exp1 * 1.2f;
+            MaxExp = MaxExp * 1.2f;
             Dame = Dame * 1.2f;
         }
         if(Hp == 0)
@@ -58,5 +58,15 @@ public class PlayerInfomation : MonoBehaviour
             Application.Quit();
 		}
 	}
+    public void EatHP(int hp)
+    {
+        currentHealth += hp;
+        healthBar.SetHealth(currentHealth);
+    }
+
+    public void EatExp()
+    {
+        exp += exp;
+    }
 
 }

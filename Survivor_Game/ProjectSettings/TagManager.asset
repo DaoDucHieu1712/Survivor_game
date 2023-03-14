@@ -8,6 +8,9 @@ TagManager:
   - DanThuong
   - DanNo
   - DanXuyen
+  - Evil
+  - Hp
+  - Bat
   layers:
   - Default
   - TransparentFX

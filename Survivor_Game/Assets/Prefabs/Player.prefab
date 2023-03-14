@@ -398,6 +398,7 @@ GameObject:
   - component: {fileID: 7851382361582335685}
   - component: {fileID: 7851382361582335684}
   - component: {fileID: 7851382361582335687}
+  - component: {fileID: 8553614862142485025}
   - component: {fileID: 7851382361582335686}
   - component: {fileID: 7851382361582335689}
   - component: {fileID: 7851382361582335688}
@@ -494,6 +495,18 @@ MonoBehaviour:
   target: {fileID: 7851382361582335685}
   speed: 2
   joystick: {fileID: 0}
+--- !u!114 &8553614862142485025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7851382361582335682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 811eedbca9f6e21498edd7176a5ea065, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &7851382361582335686
 MonoBehaviour:
   m_ObjectHideFlags: 0
