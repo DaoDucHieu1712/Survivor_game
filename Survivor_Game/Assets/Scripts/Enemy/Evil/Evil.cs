@@ -4,12 +4,19 @@ using UnityEngine;
 
 public class Evil : MonoBehaviour
 {
-    public int attackDamage = 4;
-    public float attackRange = 3f;
-    public float attackRate = 1f;
-    public float attackCooldown = 0f;
-    public float moveSpeed = 2f;
+    private float attackDamage = 4;
+    private float attackRange = 3f;
+    private float attackRate = 1f;
+    private float attackCooldown = 0f;
+    private float moveSpeed = 2f;
     public GameObject player;
+
+    public float AttackDamage { get => attackDamage; set => attackDamage = value; }
+    public float AttackRange { get => attackRange; set => attackRange = value; }
+    public float AttackRate { get => attackRate; set => attackRate = value; }
+    public float AttackCooldown { get => attackCooldown; set => attackCooldown = value; }
+    public float MoveSpeed { get => moveSpeed; set => moveSpeed = value; }
+
     void Start()
     {
         player = GameObject.FindWithTag("Player");
@@ -18,14 +25,14 @@ public class Evil : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        attackCooldown -= Time.deltaTime;
+        AttackCooldown -= Time.deltaTime;
 
-        if (Vector3.Distance(transform.position, player.transform.position) > attackRange)
+        if (Vector3.Distance(transform.position, player.transform.position) > AttackRange)
         {
             Vector3 direction = (player.transform.position - transform.position).normalized;
-            transform.Translate(direction * moveSpeed * Time.deltaTime);
+            transform.Translate(direction * MoveSpeed * Time.deltaTime);
         }
-        if (Vector3.Distance(transform.position, player.transform.position) <= attackRange)
+        if (Vector3.Distance(transform.position, player.transform.position) <= AttackRange)
         {
             Attack();
         }
@@ -33,9 +40,9 @@ public class Evil : MonoBehaviour
 
     private void Attack()
     {
-        if (attackCooldown <= 0f)
+        if (AttackCooldown <= 0f)
         {
-            attackCooldown = 1f;
+            AttackCooldown = 1f;
         }
     }
 }
