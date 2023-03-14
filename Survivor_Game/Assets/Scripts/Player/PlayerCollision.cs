@@ -5,58 +5,45 @@ using UnityEngine;
 public class PlayerCollision : MonoBehaviour
 {
 
-    GameObject player;
     PlayerInfomation pl;
+    Evil evil;
+    FlowerProperti flower;
+    BatProperty bat;
 
 
     private void Start()
     {
-        pl = GetComponent<PlayerInfomation>();
-
+        pl = FindObjectOfType<PlayerInfomation>();
+        evil = FindObjectOfType<Evil>();
+        flower = FindObjectOfType<FlowerProperti>();
+        bat = FindObjectOfType<BatProperty>();
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //if (collision.gameObject.CompareTag("Bat"))
-        //{
-
-        //}
-
-        if (collision.gameObject.CompareTag("Flower"))
+        if (collision.gameObject.CompareTag("Bat"))
         {
-            FlowerProperti flower = collision.gameObject.GetComponent<FlowerProperti>();
-            if (flower != null)
-            {
-                flower.TakeDamage(2);
-            }
+            pl.Hp -= bat.Damage;
         }
 
-        if (collision.gameObject.CompareTag("Evil"))
+        if (collision.gameObject.CompareTag("FlowerAmount"))
         {
-            EvilProperty evil = collision.gameObject.GetComponent<EvilProperty>();
-            if (evil != null)
-            {
-                evil.TakeDamage(3); 
-            }
+            pl.Hp -= evil.AttackDamage;
         }
 
-        //if (collision.gameObject.CompareTag("FlowerAmount"))
-        //{
+        if (collision.gameObject.CompareTag("EvilAmount"))
+        {
+            pl.Hp -= flower.Damage;
+        }
 
-        //}
+        if (collision.gameObject.CompareTag("Exp"))
+        {
+            pl.Exp += 2;
+        }
 
-        //if (collision.gameObject.CompareTag("EvilAmount"))
-        //{
-
-        //}
-
-        //if (collision.gameObject.CompareTag("Exp"))
-        //{
-        //    pl.Exp += 2;
-        //}
-
-        //if (collision.gameObject.CompareTag("HP"))
-        //{
-        //    pl.Hp += 1;
-        //}
+        if (collision.gameObject.CompareTag("HP"))
+        {
+            pl.Hp += 1;
+        }
     } 
 }

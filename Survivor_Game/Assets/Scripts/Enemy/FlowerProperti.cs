@@ -5,20 +5,24 @@ using UnityEngine.UI;
 
 public class FlowerProperti : MonoBehaviour
 {
-	// Start is called before the first frame update
+    // Start is called before the first frame update
 
-	// Start is called before the first frame update
+    // Start is called before the first frame update
 
-	public int maxHealth = 20;
-	public int currentHealth;
-	public int damage = 5;
-	public HealthBar healthBar;
+    private float maxHealth = 20;
+    private float currentHealth;
+    private float damage = 5;
+    public HealthBar healthBar;
 
-	// Start is called before the first frame update
-	void Start()
+    public float MaxHealth { get => maxHealth; set => maxHealth = value; }
+    public float CurrentHealth { get => currentHealth; set => currentHealth = value; }
+    public float Damage { get => damage; set => damage = value; }
+
+    // Start is called before the first frame update
+    void Start()
 	{
-		currentHealth = maxHealth;
-		healthBar.SetMaxHealth(maxHealth);
+		CurrentHealth = MaxHealth;
+		healthBar.SetMaxHealth(MaxHealth);
 	}
 
 	// Update is called once per frame
@@ -27,12 +31,12 @@ public class FlowerProperti : MonoBehaviour
 	
 	}
 
-	public void TakeDamage(int damage)
+	public void TakeDamage(float damage)
 	{
-		currentHealth -= damage;
+		CurrentHealth -= damage;
 
-		healthBar.SetHealth(currentHealth);
-		if (currentHealth <= 0)
+		healthBar.SetHealth(CurrentHealth);
+		if (CurrentHealth <= 0)
 		{
 			Destroy(gameObject);
 		}
