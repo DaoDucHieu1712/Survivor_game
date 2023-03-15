@@ -6,7 +6,8 @@ using UnityEngine;
 
 using static UnityEngine.RuleTile.TilingRuleOutput;
 
-public class TriggerBullet : MonoBehaviour {
+public class TriggerBullet : MonoBehaviour
+{
     private void OnTriggerEnter2D(Collider2D collision)
     {
         string tag = gameObject.tag;
@@ -52,6 +53,8 @@ public class TriggerBullet : MonoBehaviour {
         transform.localScale = newScale;
         Destroy(gameObject, 0.5f);
     }
+
+    
 }
 
 

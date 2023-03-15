@@ -9,7 +9,7 @@
 		public GameObject bulletPrefab;
 		public float fireRate = 2.5f;
 		public float bulletSpeed = 5f;
-		public float bulletLifetime = 2f;
+		public float bulletLifetime = 5f;
 
 		public float dame = 5;
 		public float hp = 20;
