@@ -66,6 +66,8 @@ public class TriggerBullet : MonoBehaviour {
         transform.localScale = newScale;
         Destroy(gameObject, 1f);
     }
+
+    
 }
 
 

@@ -13,6 +13,9 @@ public class FlowerSpawn : MonoBehaviour
 	public float spawnInterval = 4f;
 	public float moveSpeed = 2f;
 	private float timeSinceLastSpawn;
+	public GameObject hpPrefab;
+	public GameObject expPrefab;
+	public GameObject expUntilPrefab;
 
 	private GameObject player; // Reference to the player object
 
