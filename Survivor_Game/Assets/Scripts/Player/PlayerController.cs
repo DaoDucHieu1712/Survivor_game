@@ -13,8 +13,8 @@ public class PlayerController : MonoBehaviour
 
     Weapon weapon = null;
 
-    public float bulletSpeed;
-    public float spawnDelay;
+    private float bulletSpeed;
+    private float spawnDelay;
     private float nextSpawnTime;
     PlayerInfomation playerInfo;
 
@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         playerInfo = FindObjectOfType<PlayerInfomation>();
-        weapon = new Weapon(DanXuyen, 2, 1f, 2f);
+        weapon = new Weapon(DanUltimate, 2f, 1f, 2f);
         SetProperty(weapon);
     }
 
@@ -40,14 +40,12 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-
     void SetProperty(Weapon weapon)
     {
         prefabBullet = weapon.bullet;
         bulletSpeed = weapon.Speed;
         spawnDelay = weapon.SpawnDelay;
     }
-
 
     //public void ChangeWeapon(int skill)
     //{
