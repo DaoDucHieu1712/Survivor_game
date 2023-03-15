@@ -1238,8 +1238,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1485027572}
   m_CullTransparentMesh: 1
-<<<<<<< Updated upstream
-=======
 --- !u!1 &1513280440
 GameObject:
   m_ObjectHideFlags: 0
@@ -1287,7 +1285,6 @@ MonoBehaviour:
   prefabTarget: {fileID: 4296962338409670344, guid: 8c718396742b26843b96c5a88303e5cc, type: 3}
   spawnInterval: 6
   moveSpeed: 2
->>>>>>> Stashed changes
 --- !u!1 &1548164249
 GameObject:
   m_ObjectHideFlags: 0
@@ -1594,68 +1591,6 @@ MonoBehaviour:
   m_MaximumFOV: 60
   m_MinimumOrthoSize: 1
   m_MaximumOrthoSize: 5000
-<<<<<<< Updated upstream
-
---- !u!1001 &2122641495
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3965757749935185230, guid: 0e3558dacf13f7d47ad7eb367e792bac, type: 3}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3965757749935185230, guid: 0e3558dacf13f7d47ad7eb367e792bac, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.67
-      objectReference: {fileID: 0}
-    - target: {fileID: 3965757749935185230, guid: 0e3558dacf13f7d47ad7eb367e792bac, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.84
-      objectReference: {fileID: 0}
-    - target: {fileID: 3965757749935185230, guid: 0e3558dacf13f7d47ad7eb367e792bac, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3965757749935185230, guid: 0e3558dacf13f7d47ad7eb367e792bac, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3965757749935185230, guid: 0e3558dacf13f7d47ad7eb367e792bac, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3965757749935185230, guid: 0e3558dacf13f7d47ad7eb367e792bac, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3965757749935185230, guid: 0e3558dacf13f7d47ad7eb367e792bac, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3965757749935185230, guid: 0e3558dacf13f7d47ad7eb367e792bac, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3965757749935185230, guid: 0e3558dacf13f7d47ad7eb367e792bac, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3965757749935185230, guid: 0e3558dacf13f7d47ad7eb367e792bac, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7662128937031336311, guid: 0e3558dacf13f7d47ad7eb367e792bac, type: 3}
-      propertyPath: m_Name
-      value: Bat
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 0e3558dacf13f7d47ad7eb367e792bac, type: 3}
-
-=======
->>>>>>> Stashed changes
 --- !u!1001 &7851382361344550817
 PrefabInstance:
   m_ObjectHideFlags: 0
