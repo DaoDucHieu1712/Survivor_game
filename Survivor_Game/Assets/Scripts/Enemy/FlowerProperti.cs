@@ -45,8 +45,7 @@ public class FlowerProperti : MonoBehaviour
 			Destroy(gameObject);
 		}
 	}
-<<<<<<< Updated upstream
-=======
+
 
 	private void OnDestroy()
 	{
@@ -54,6 +53,7 @@ public class FlowerProperti : MonoBehaviour
 		if (flowerSpawn != null)
 		{
 			// Randomly select a prefab to spawn (1 in 3 chance for each type)
+
 
 			float rand = Random.value;
 			if (rand < 0.4f) // 40% chance to spawn hpPrefab
@@ -65,10 +65,11 @@ public class FlowerProperti : MonoBehaviour
 				Instantiate(flowerSpawn.expPrefab, transform.position, Quaternion.identity);
 			}
 			else // 20% chance to spawn expuntilPrefab
+
 			{
 				Instantiate(flowerSpawn.expUntilPrefab, transform.position, Quaternion.identity);
 			}
 		}
 	}
->>>>>>> Stashed changes
+
 }

@@ -2,16 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-<<<<<<< Updated upstream
-	public class FlowerShoot : MonoBehaviour
-	{
-		// Start is called before the first frame update
-		[SerializeField]
-		public GameObject bulletPrefab;
-		public float fireRate = 2.5f;
-		public float bulletSpeed = 5f;
-		public float bulletLifetime = 2f;
-=======
+
 public class FlowerShoot : MonoBehaviour
 {
 	// Start is called before the first frame update
@@ -22,12 +13,14 @@ public class FlowerShoot : MonoBehaviour
 	public float bulletLifetime = 2f;
 	private GameObject player;
 	float playerLevel;
->>>>>>> Stashed changes
+
 
 	public float dame = 5;
 	public float hp = 20;
 
 	private float bulletSpeedIncrease = 0.2f;
+
+		
 
 	private Transform target;
 

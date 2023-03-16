@@ -7,26 +7,38 @@ using UnityEngine;
 using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class TriggerBullet : MonoBehaviour {
+
+    public bool IsEnemy(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Flower" || collision.gameObject.tag == "Evil" || collision.gameObject.tag == "Bat")
+        {
+            return true;
+        }
+        return false;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         string tag = gameObject.tag;
         Debug.Log(tag);
-        switch (tag)
+        if (IsEnemy(collision) == true)
         {
-            case "DanThuong":
-                HandlerDanThuong();
-                break;
-            case "DanNo":
-                HandlerDanNo();
-                break;
-            case "DanXuyen":
-                HandlerDanXuyen();
-                break;
-            case "DanUltimate":
-                HandlerDanUltimate();
-                break;
+            switch (tag)
+            {
+                case "DanThuong":
+                    HandlerDanThuong();
+                    break;
+                case "DanNo":
+                    HandlerDanNo();
+                    break;
+                case "DanXuyen":
+                    HandlerDanXuyen();
+                    break;
+                case "DanUltimate":
+                    HandlerDanUltimate();
+                    break;
+            }
         }
-
     }
 
     private void HandlerDanUltimate()
@@ -37,7 +49,7 @@ public class TriggerBullet : MonoBehaviour {
     private void HandlerDanXuyen()
     {
         Debug.Log("HandlerDanXuyen");
-        Destroy(gameObject, 0.2f);
+        Destroy(gameObject, 2f);
     }
 
     private void HandlerDanThuong()
@@ -47,11 +59,15 @@ public class TriggerBullet : MonoBehaviour {
 
     public void HandlerDanNo()
     {
-        float zoom = 3.0f;
+        Debug.Log("HandlerDanNo");
+
+        float zoom = 2.0f;
         Vector3 newScale = new Vector3(zoom, zoom, 1);
         transform.localScale = newScale;
-        Destroy(gameObject, 0.5f);
+        Destroy(gameObject, 1f);
     }
+
+    
 }
 
 

@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerInfomation : MonoBehaviour
 {
+
 	//float lv = 1;
 	//float hp = 50;
 	//float dame = 10;
@@ -16,6 +17,7 @@ public class PlayerInfomation : MonoBehaviour
 	public float exp = 10.825f;
 	public int level = 1;
 	public float currentHealth;
+
 	public HealthBar healthBar;
 
 	//public delegate void LevelChangedEventHandler(float newLevel);
@@ -40,6 +42,7 @@ public class PlayerInfomation : MonoBehaviour
 		currentHealth = hp;
 		healthBar.SetMaxHealth(hp);
 	}
+
 
 
 	public void IncreaseExp(float amount)
@@ -78,8 +81,9 @@ public class PlayerInfomation : MonoBehaviour
 	//       if (Exp >= MaxExp)
 	//       {
 	//           Lv++;
-	//           MaxExp = MaxExp * 1.2f;
-	//           Dame = Dame * 1.2f;
+	//           MaxExp = MaxExp * 1.8f;
+	//           Dame = Dame * 1.4f;
+  //              Hp = Hp * 1.3f;
 	//       }
 	//       if(Hp == 0)
 	//       {
@@ -103,9 +107,9 @@ public class PlayerInfomation : MonoBehaviour
         healthBar.SetHealth(currentHealth);
     }
 
-    public void EatExp()
+    public void EatExp(int i)
     {
-        exp += exp;
+       Exp += i;
     }
 
 	

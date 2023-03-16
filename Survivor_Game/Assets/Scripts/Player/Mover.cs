@@ -4,38 +4,33 @@ using UnityEngine;
 
 public class Mover : MonoBehaviour {
 
-    public Transform target; // Object B
-    public float speed = 10f; // movement speed of Object A\
+
+    public float speed = 10f;
+    public float rotationSpeed = 100f;
 
     public FixedJoystick joystick;
-    Vector2 move;
-    Rigidbody2D rb;
-
-    private Vector3 direction;
-    private Transform myTransform;
     void Start()
     {
-        myTransform = transform;
-        rb = GetComponent<Rigidbody2D>();
-
     }
 
-    // Update is called once per frame
     void Update()
     {
+
         float horizontal = joystick.Horizontal;
         float vertical = joystick.Vertical;
 
-        float s = vertical * speed * Time.deltaTime;
-        transform.Translate(0, s, 0);
+        Vector3 direction = new Vector3(horizontal, vertical, 0f).normalized;
 
-        if (horizontal != 0 || vertical != 0)
+        if (direction.magnitude > 0.1f)
         {
-            Vector3 direction = new Vector3(horizontal, vertical, 0f);
-            transform.rotation = Quaternion.LookRotation(Vector3.forward, direction);
+            // Rotate the game object based on the direction of the joystick
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            Quaternion targetRotation = Quaternion.Euler(0f, 0f, angle - 90f);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+
+            // Move the game object in the direction of the joystick
+            transform.position += direction * speed * Time.deltaTime;
         }
     }
-
- 
 
 }

@@ -58,7 +58,6 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -401,7 +400,6 @@ MonoBehaviour:
     atime6: 0
     atime7: 0
     m_Mode: 1
-    m_ColorSpace: -1
     m_NumColorKeys: 3
     m_NumAlphaKeys: 3
   fill: {fileID: 1826415542077375616}
@@ -737,28 +735,9 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 4.255396, y: 0.56738615}
+  m_Offset: {x: 4.2285833, y: 0.044539213}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -769,7 +748,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.652565, y: 7.808631}
+  m_Size: {x: 3.4539256, y: 6.065808}
   m_EdgeRadius: 0
 --- !u!114 &3788065998632761985
 MonoBehaviour:
@@ -784,9 +763,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 6007182752966284585, guid: 069d8e7ab25e7ed4eb142615b2a0ecf4, type: 3}
-  fireRate: 0.5
-  bulletSpeed: 5
-  bulletLifetime: 2
+  fireRate: 2.5
+  bulletSpeed: 2
+  bulletLifetime: 10
   dame: 5
   hp: 20
 --- !u!114 &8570012962457071247
@@ -801,9 +780,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d90deee36974a546a0591a579b743af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 20
-  currentHealth: 0
-  damage: 5
   healthBar: {fileID: 7371549991051891985}
 --- !u!1 &4826811667649461394
 GameObject:
