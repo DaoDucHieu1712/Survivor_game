@@ -109,7 +109,7 @@ public class PlayerInfomation : MonoBehaviour
 
     public void EatExp(int i)
     {
-       Exp += i;
+		exp += i;
     }
 
 	

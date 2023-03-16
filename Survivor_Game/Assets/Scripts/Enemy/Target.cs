@@ -25,8 +25,6 @@ public class Target : MonoBehaviour
 
 	private void SetNewTargetPos()
 	{
-
-
 		Vector3 topRight = Camera.main.ViewportToWorldPoint(new Vector3(1, 1, Camera.main.nearClipPlane));
 		Vector3 bottomLeft = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, Camera.main.nearClipPlane));
 		float right = topRight.x;
