@@ -484,7 +484,7 @@ GameObject:
   - component: {fileID: 6799639337264041072}
   - component: {fileID: 1932924725023232422}
   - component: {fileID: 5946796829554243984}
-  - component: {fileID: 8734134977175679724}
+  - component: {fileID: 2121369791804983924}
   m_Layer: 0
   m_Name: Evil
   m_TagString: Evil
@@ -625,7 +625,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.7036169, y: 3.517474}
   m_EdgeRadius: 0
---- !u!114 &8734134977175679724
+--- !u!114 &2121369791804983924
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -634,15 +634,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 3880152349798100982}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9c15d5305cb3094c8a455428dc51939, type: 3}
+  m_Script: {fileID: 11500000, guid: 7add1c0c82da6cd4780ce20552bc74c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 4980268430222807240, guid: 44be05c4cf53a4643ae64a148454cc89, type: 3}
-  evilRate: 1
-  bulletSpeed: 10
+  movementSpeed: 5
+  desiredDistance: 5
+  bulletSpeed: 2
   bulletLifetime: 2
-  dame: 4
-  hp: 30
+  EvilBullet: {fileID: 4980268430222807240, guid: 44be05c4cf53a4643ae64a148454cc89, type: 3}
 --- !u!1 &7333917680693196662
 GameObject:
   m_ObjectHideFlags: 0

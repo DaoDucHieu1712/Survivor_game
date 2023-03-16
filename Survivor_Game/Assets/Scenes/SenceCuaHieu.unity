@@ -1499,7 +1499,7 @@ GameObject:
   - component: {fileID: 1636360505}
   - component: {fileID: 1636360504}
   - component: {fileID: 1636360503}
-  - component: {fileID: 1636360502}
+  - component: {fileID: 1636360508}
   - component: {fileID: 1636360506}
   - component: {fileID: 1636360507}
   m_Layer: 0
@@ -1509,21 +1509,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1636360502
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1636360501}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2860eb2c2ac1e2140ab5010d8c7184c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabTarget: {fileID: 3880152349798100982, guid: 5c34b247d8595124db7a0573813a992b, type: 3}
-  spawnInterval: 2
-  moveSpeed: 10
 --- !u!114 &1636360503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1601,6 +1586,20 @@ MonoBehaviour:
   _flower: {fileID: 4296962338409670344, guid: 8c718396742b26843b96c5a88303e5cc, type: 3}
   _evil: {fileID: 3880152349798100982, guid: 5c34b247d8595124db7a0573813a992b, type: 3}
   spawnInterval: 4
+--- !u!114 &1636360508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636360501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c79c95744f5a2fb4292145f5a07c6128, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  evilPrefab: {fileID: 3880152349798100982, guid: 5c34b247d8595124db7a0573813a992b, type: 3}
+  spawnDelay: 2
 --- !u!1 &1803481111
 GameObject:
   m_ObjectHideFlags: 0
@@ -1935,15 +1934,19 @@ PrefabInstance:
     - target: {fileID: 7851382361582335686, guid: 1b588a2dd3527cc4f8174c58d0c7aa9e, type: 3}
       propertyPath: DanNo
       value: 
-      objectReference: {fileID: 8622149321135767779, guid: ea58fa842e694d94cbde548e7eb83d9e, type: 3}
+      objectReference: {fileID: 4643453627139593212, guid: 6459758d7d3a13a49bedb36ebf8d93fa, type: 3}
     - target: {fileID: 7851382361582335686, guid: 1b588a2dd3527cc4f8174c58d0c7aa9e, type: 3}
       propertyPath: DanXuyen
       value: 
-      objectReference: {fileID: 8622149321135767779, guid: ea58fa842e694d94cbde548e7eb83d9e, type: 3}
+      objectReference: {fileID: 5035192628889467886, guid: bd754bdbee1a68148bfe5118c9de4d51, type: 3}
+    - target: {fileID: 7851382361582335686, guid: 1b588a2dd3527cc4f8174c58d0c7aa9e, type: 3}
+      propertyPath: DanThuong
+      value: 
+      objectReference: {fileID: 8550073341852849716, guid: ea58fa842e694d94cbde548e7eb83d9e, type: 3}
     - target: {fileID: 7851382361582335686, guid: 1b588a2dd3527cc4f8174c58d0c7aa9e, type: 3}
       propertyPath: DanUltimate
       value: 
-      objectReference: {fileID: 8622149321135767779, guid: ea58fa842e694d94cbde548e7eb83d9e, type: 3}
+      objectReference: {fileID: 8874364673681146318, guid: 3991465d03f36364cb97e21af4158b18, type: 3}
     - target: {fileID: 7851382361582335687, guid: 1b588a2dd3527cc4f8174c58d0c7aa9e, type: 3}
       propertyPath: joystick
       value: 
