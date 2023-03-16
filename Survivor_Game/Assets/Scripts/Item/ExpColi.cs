@@ -11,10 +11,7 @@ public class ExpColi : MonoBehaviour
         if (collision.gameObject.CompareTag("Exp"))
         {
             pl = collision.gameObject.GetComponent<PlayerInfomation>();
-            if (pl.currentHealth < pl.Hp)
-            {
-                pl.EatHP(15);
-            }
+            pl.EatExp(4);
             Destroy(collision.gameObject);
         }
     }

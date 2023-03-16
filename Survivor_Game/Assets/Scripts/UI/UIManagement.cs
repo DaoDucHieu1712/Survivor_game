@@ -9,7 +9,7 @@ public class UIManagement : MonoBehaviour
     public GameObject gameoverPanel;
     // Start is called before the first frame update
 
-    public void SetCoreText(string text)
+    public void SetScoreText(string text)
     {
         if (scoreText)
         {

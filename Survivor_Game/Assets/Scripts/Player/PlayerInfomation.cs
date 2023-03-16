@@ -5,10 +5,10 @@ using UnityEngine;
 public class PlayerInfomation : MonoBehaviour
 {
     float lv = 1;
-    int hp = 50;
-    int dame = 10;
-    float exp = 0;
-    float maxExp = 100;
+    public int hp = 50;
+    public int dame = 10;
+    public float exp = 0;
+    public float maxExp = 100;
 	public int currentHealth;
 	public HealthBar healthBar;
 
@@ -64,7 +64,7 @@ public class PlayerInfomation : MonoBehaviour
         healthBar.SetHealth(currentHealth);
     }
 
-    public void EatExp()
+    public void EatExp(int exp)
     {
         exp += exp;
     }
