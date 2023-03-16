@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using JetBrains.Annotations;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,7 +11,6 @@ public class FlowerSpawn : MonoBehaviour
 	////public int curentHealth;
 	////public Slider healthSlider;
 	public GameObject prefabTarget;
-	public float spawnInterval = 4f;
 	public float moveSpeed = 2f;
 	private float timeSinceLastSpawn;
 
@@ -20,11 +20,15 @@ public class FlowerSpawn : MonoBehaviour
 	{
 		// Find the player object using its tag
 		player = GameObject.FindGameObjectWithTag("Player");
-		
 	}
 
 	void Update()
 	{
+		// Get the current level of the player
+		float playerLevel = player.GetComponent<PlayerInfomation>().level;
+		Debug.Log("Level hien tại là" + playerLevel);
+		float spawnInterval = 5f - playerLevel * 0.2f;
+		Debug.Log("Time spawn la" + spawnInterval);
 		timeSinceLastSpawn += Time.deltaTime;
 		if (timeSinceLastSpawn >= spawnInterval)
 		{
@@ -45,23 +49,31 @@ public class FlowerSpawn : MonoBehaviour
 
 		// Instantiate the prefabTarget at targetPos
 		GameObject newPrefabTarget = Instantiate(prefabTarget, targetPos, Quaternion.identity);
-		//// Get the current level of the player
-		//float playerLevel = player.GetComponent<PlayerInfomation>().Lv;
 
-		//// Increase the health of the new target based on the player level
-		//int targetHealth = 20 + (int)playerLevel * 2;
-		//newPrefabTarget.GetComponent<FlowerProperti>().maxHealth = targetHealth;
-		//newPrefabTarget.GetComponent<FlowerProperti>().currentHealth = targetHealth;
+		//Get the current level of the player
+		float playerLevel = player.GetComponent<PlayerInfomation>().level;
 
-		//// Increase the damage of the new target based on the player level
-		//int targetDamage = 1 + (int)playerLevel;
-		//newPrefabTarget.GetComponent<FlowerProperti>().damage = targetDamage;
+		// Increase the health of the new target based on the player level
+		float targetHealth = 20 + playerLevel * 3;
+		newPrefabTarget.GetComponent<FlowerProperti>().MaxHealth = targetHealth;
+		newPrefabTarget.GetComponent<FlowerProperti>().CurrentHealth = targetHealth;
+
+		Debug.Log("Level cua player" + playerLevel);
+		Debug.Log("Mac heo " + newPrefabTarget.GetComponent<FlowerProperti>().MaxHealth);
+		Debug.Log("Suc khoe" + newPrefabTarget.GetComponent<FlowerProperti>().CurrentHealth);
+	
+
+		// Increase the damage of the new target based on the player level
+		float targetDamage = 2 + playerLevel;
+		newPrefabTarget.GetComponent<FlowerProperti>().Damage = targetDamage;
+
+		// Calculate the spawn interval based on the player level
+
 
 		// Start a coroutine to move the prefabTarget towards the player after 3 seconds
 		StartCoroutine(MoveToPlayer(newPrefabTarget));
 
 		// Fire a bullet from the newPrefabTarget towards the player's position
-		
 	}
 
 
