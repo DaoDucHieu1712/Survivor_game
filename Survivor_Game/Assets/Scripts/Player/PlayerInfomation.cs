@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class PlayerInfomation : MonoBehaviour
 {
-    float lv = 1;
-    int hp = 50;
-    int dame = 10;
-    float exp = 0;
-    float maxExp = 100;
+    public float lv = 1;
+    public int hp = 50;
+    public int dame = 10;
+    public float exp = 0;
+    public float maxExp = 20;
 	public int currentHealth;
 	public HealthBar healthBar;
 
@@ -39,8 +39,9 @@ public class PlayerInfomation : MonoBehaviour
         if (Exp >= MaxExp)
         {
             Lv++;
-            MaxExp = MaxExp * 1.2f;
-            Dame = Dame * 1.2f;
+            MaxExp = MaxExp * 1.8f;
+            Dame = Dame * 1.4f;
+            Hp = Hp * 1.3f;
         }
         if(Hp == 0)
         {
@@ -64,9 +65,9 @@ public class PlayerInfomation : MonoBehaviour
         healthBar.SetHealth(currentHealth);
     }
 
-    public void EatExp()
+    public void EatExp(int i)
     {
-        exp += exp;
+       Exp += i;
     }
 
 }

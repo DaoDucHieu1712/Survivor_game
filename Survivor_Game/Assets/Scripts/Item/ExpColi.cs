@@ -8,14 +8,11 @@ public class ExpColi : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Exp"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             pl = collision.gameObject.GetComponent<PlayerInfomation>();
-            if (pl.currentHealth < pl.Hp)
-            {
-                pl.EatHP(15);
-            }
-            Destroy(collision.gameObject);
+            pl.EatExp(3);
+            Destroy(gameObject);
         }
     }
 }
