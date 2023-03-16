@@ -12,7 +12,7 @@ public class FlowerSpawn : MonoBehaviour
 	////public Slider healthSlider;
 	public GameObject prefabTarget;
 	public float moveSpeed = 2f;
-	private float timeSinceLastSpawn;
+	private float timeSinceLastSpawn = 4f;
 	public GameObject hpPrefab;
 	public GameObject expPrefab;
 	public GameObject expUntilPrefab;

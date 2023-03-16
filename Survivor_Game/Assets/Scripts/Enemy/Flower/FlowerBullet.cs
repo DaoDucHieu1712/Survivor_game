@@ -16,7 +16,7 @@ public class FlowerBullet : MonoBehaviour
 
 			if (player.currentHealth > 0)
 			{
-				player.TakeDamage(5);
+				player.TakeDamage(flower.Damage);
 			}
 
 			Destroy(gameObject);

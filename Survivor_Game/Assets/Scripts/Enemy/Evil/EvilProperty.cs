@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class EvilProperty : MonoBehaviour
 {
-    public int maxHealth = 30;
-    public int currentHealth;
+    public float maxHealth = 30;
+    public float currentHealth;
 
     public EvilHealthBar healthBar;
 
@@ -22,7 +22,7 @@ public class EvilProperty : MonoBehaviour
        
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
         currentHealth -= damage;
 

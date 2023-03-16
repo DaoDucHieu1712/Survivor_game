@@ -54,7 +54,6 @@ public class FlowerProperti : MonoBehaviour
 		{
 			// Randomly select a prefab to spawn (1 in 3 chance for each type)
 
-
 			float rand = Random.value;
 			if (rand < 0.4f) // 40% chance to spawn hpPrefab
 			{

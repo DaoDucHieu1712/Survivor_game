@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         playerInfo = FindObjectOfType<PlayerInfomation>();
-        weapon = new Weapon(DanUltimate, 2f, 1f, 2f);
+        weapon = new Weapon(DanThuong, 2f, 1f, 2f);
         SetProperty(weapon);
     }
 
@@ -47,32 +47,32 @@ public class PlayerController : MonoBehaviour
         spawnDelay = weapon.SpawnDelay;
     }
 
-    //public void ChangeWeapon(int skill)
-    //{
-    //    switch (skill)
-    //    {
-    //        case 1:
-    //            Debug.Log("1");
-    //            weapon = new Weapon(DanThuong, playerInfo.dame, 0.2f, 2f);
-    //            SetProperty(weapon);
-    //            break;
-    //        case 2:
-    //            Debug.Log("2");
-    //            weapon = new Weapon(DanNo, playerInfo.dame, 1f, 1f);
-    //            SetProperty(weapon);
-    //            break;
-    //        case 3:
-    //            Debug.Log("3");
-    //            weapon = new Weapon(DanXuyen, playerInfo.dame / 2, 0.5f, 3f);
-    //            SetProperty(weapon);
-    //            break;
-    //        case 4:
-    //            Debug.Log("4");
-    //            weapon = new Weapon(DanUltimate, playerInfo.dame * 3, 1.5f, 4f);
-    //            SetProperty(weapon);
-    //            break;
-    //    }
-    //}
+    public void ChangeWeapon(int bullet)
+    {
+        switch (bullet)
+        {
+            case 1:
+                Debug.Log("1");
+                weapon = new Weapon(DanThuong, playerInfo.dame, 0.2f, 2f);
+                SetProperty(weapon);
+                break;
+            case 2:
+                Debug.Log("2");
+                weapon = new Weapon(DanNo, playerInfo.dame, 1f, 1f);
+                SetProperty(weapon);
+                break;
+            case 3:
+                Debug.Log("3");
+                weapon = new Weapon(DanXuyen, playerInfo.dame / 2, 0.5f, 3f);
+                SetProperty(weapon);
+                break;
+            case 4:
+                Debug.Log("4");
+                weapon = new Weapon(DanUltimate, playerInfo.dame * 3, 1.5f, 4f);
+                SetProperty(weapon);
+                break;
+        }
+    }
 
 
 }
