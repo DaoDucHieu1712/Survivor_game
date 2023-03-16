@@ -107,10 +107,10 @@ public class PlayerInfomation : MonoBehaviour
         healthBar.SetHealth(currentHealth);
     }
 
-    public void EatExp(int i)
-    {
-       Exp += i;
-    }
+    //public void EatExp(int i)
+    //{
+    //   Exp += i;
+    //}
 
 	
 }

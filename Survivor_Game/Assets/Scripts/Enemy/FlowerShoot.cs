@@ -26,6 +26,7 @@ public class FlowerShoot : MonoBehaviour
 
 	void Start()
 	{
+		player = GameObject.FindGameObjectWithTag("Player");
 		target = GameObject.FindGameObjectWithTag("Player").transform;
 		InvokeRepeating("FireBullet", 0f, fireRate);
 		

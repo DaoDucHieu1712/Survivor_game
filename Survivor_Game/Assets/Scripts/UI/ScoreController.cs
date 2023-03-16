@@ -20,7 +20,7 @@ public class ScoreController : MonoBehaviour
     // Update is called once per frame
     public void IncrementScore()
     {
-        Score += pl.Lv * 4;
+        Score += pl.level * 4;
         ui.SetCoreText("Score : " + Score);
     }
 }
