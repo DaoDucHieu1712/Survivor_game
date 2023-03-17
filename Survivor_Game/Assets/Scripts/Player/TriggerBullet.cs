@@ -16,9 +16,6 @@ public class TriggerBullet : MonoBehaviour {
 
     public void Start()
     {
-        Flower = FindObjectOfType<FlowerProperti>();
-        Evil = FindObjectOfType<EvilProperty>();
-        Bat = FindObjectOfType<BatProperty>();
         player = FindObjectOfType<PlayerInfomation>();
 
     }
@@ -33,52 +30,57 @@ public class TriggerBullet : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        string enemyTag = collision.gameObject.tag;
-        float damePlayer = player.dame;
+        GameObject enemy = collision.gameObject;
         string tag = gameObject.tag;
-        Debug.Log(tag);
+        float damePlayer = player.dame;
         if (IsEnemy(collision) == true)
         {
             switch (tag)
             {
                 case "DanThuong":
-                    HandlerDanThuong(damePlayer, enemyTag);
+                    HandlerDanThuong(damePlayer, enemy);
                     break;
                 case "DanNo":
-                    HandlerDanNo(damePlayer, enemyTag);
+                    HandlerDanNo(damePlayer, enemy);
                     break;
                 case "DanXuyen":
-                    HandlerDanXuyen(damePlayer, enemyTag);
+                    HandlerDanXuyen(damePlayer, enemy);
                     break;
                 case "DanUltimate":
-                    HandlerDanUltimate(damePlayer, enemyTag);
+                    HandlerDanUltimate(damePlayer, enemy);
                     break;
             }
+
         }
     }
 
-    private void HandlerDanUltimate(float dame, string enemy)
+    private void HandlerDanUltimate(float dame, GameObject enemy)
     {
         float zoom = 2.0f;
         Vector3 newScale = new Vector3(zoom, zoom, 1);
         transform.localScale = newScale;
+
         DameEnemy(dame, enemy);
+
         Destroy(gameObject, 2f);
     }
 
-    private void HandlerDanXuyen(float dame, string enemy)
+    private void HandlerDanXuyen(float dame, GameObject enemy)
     {
         Debug.Log("HandlerDanXuyen");
+
         DameEnemy(dame, enemy);
+
         Destroy(gameObject, 2f);
     }
 
-    private void HandlerDanThuong(float dame, string enemy)
+    private void HandlerDanThuong(float dame, GameObject enemy)
     {
         DameEnemy(dame, enemy);
+
     }
 
-    public void HandlerDanNo(float dame, string enemy)
+    public void HandlerDanNo(float dame, GameObject enemy)
     {
 
         float zoom = 2.0f;
@@ -86,21 +88,23 @@ public class TriggerBullet : MonoBehaviour {
         transform.localScale = newScale;
 
         DameEnemy(dame, enemy);
-        Destroy(gameObject, 1f);
+
+
+        Destroy(gameObject, 0.2f);
     }
 
-    public void DameEnemy(float dame, string enemy)
+    public void DameEnemy(float dame, GameObject enemy)
     {
-        switch (enemy)
+        switch (enemy.tag)
         {
             case "Flower":
-                Flower.TakeDamage(dame);
+                enemy.GetComponent<FlowerProperti>().TakeDamage(dame);
                 break;
             case "Bat":
-                Bat.TakeDamage(dame);
+                enemy.GetComponent<BatProperty>().TakeDamage(dame);
                 break;
             case "Evil":
-                Evil.TakeDamage(dame);
+                enemy.GetComponent<EvilProperty>().TakeDamage(dame);
                 break;
         }
     }

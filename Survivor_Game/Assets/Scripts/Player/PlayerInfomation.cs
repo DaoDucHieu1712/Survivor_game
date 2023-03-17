@@ -6,12 +6,6 @@ using UnityEngine;
 public class PlayerInfomation : MonoBehaviour
 {
 
-	//float lv = 1;
-	//float hp = 50;
-	//float dame = 10;
-	//float exp = 0;
-	//float maxExp = 100;
-
 	public float dame = 10f;
 	public float hp = 50f;
 	public float exp = 10.825f;

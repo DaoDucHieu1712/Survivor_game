@@ -396,12 +396,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2440793030083050592}
-  - component: {fileID: -6640531279246685576}
-  - component: {fileID: -5944259132078955828}
-  - component: {fileID: 4767637114413507548}
+  - component: {fileID: 6811705513502536423}
+  - component: {fileID: 4918900436213668536}
   m_Layer: 0
   m_Name: Bats
-  m_TagString: Untagged
+  m_TagString: Bat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -426,7 +425,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-6640531279246685576
+--- !u!114 &6811705513502536423
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -435,11 +434,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6242835439835695057}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 022d37ee85c6f2c4cb60c7ece7473945, type: 3}
+  m_Script: {fileID: 11500000, guid: bf8126fd5b5cf3b4cab704bcfcdcd439, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: {fileID: 0}
---- !u!114 &-5944259132078955828
+  healthBar: {fileID: 8517888566410122337}
+--- !u!114 &4918900436213668536
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -448,20 +447,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6242835439835695057}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bdf2cd74d4ac4443adea00925748c8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 2
---- !u!114 &4767637114413507548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6242835439835695057}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bdf2cd74d4ac4443adea00925748c8c, type: 3}
+  m_Script: {fileID: 11500000, guid: c86fe143aae877a4bbc12be60d4d539b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 2
@@ -528,7 +514,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bat (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6185236875896216275, guid: 0e3558dacf13f7d47ad7eb367e792bac, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0e3558dacf13f7d47ad7eb367e792bac, type: 3}
 --- !u!4 &4203788863147627293 stripped
 Transform:
@@ -598,7 +585,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bat (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6185236875896216275, guid: 0e3558dacf13f7d47ad7eb367e792bac, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0e3558dacf13f7d47ad7eb367e792bac, type: 3}
 --- !u!4 &2210696952989928150 stripped
 Transform:
@@ -668,7 +656,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bat (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6185236875896216275, guid: 0e3558dacf13f7d47ad7eb367e792bac, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0e3558dacf13f7d47ad7eb367e792bac, type: 3}
 --- !u!4 &415950296039531181 stripped
 Transform:
@@ -742,7 +731,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bat
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6185236875896216275, guid: 0e3558dacf13f7d47ad7eb367e792bac, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0e3558dacf13f7d47ad7eb367e792bac, type: 3}
 --- !u!4 &6425209329756039364 stripped
 Transform:

@@ -29,10 +29,8 @@ public class FlowerSpawn : MonoBehaviour
 	void Update()
 	{
 		// Get the current level of the player
-		//float playerLevel = player.GetComponent<PlayerInfomation>().lv;
-		//Debug.Log("Level hien tại là" + playerLevel);
-		//float spawnInterval = 5f - playerLevel * 0.2f;
-		//Debug.Log("Time spawn la" + spawnInterval);
+		float playerLevel = player.GetComponent<PlayerInfomation>().level;
+		float spawnInterval = 5f - playerLevel * 0.2f;
 		timeSinceLastSpawn += Time.deltaTime;
 		if (timeSinceLastSpawn >= spawnInterval)
 		{

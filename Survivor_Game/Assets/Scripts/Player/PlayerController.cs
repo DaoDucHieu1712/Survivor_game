@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         playerInfo = FindObjectOfType<PlayerInfomation>();
-        weapon = new Weapon(DanThuong, 2f, 1f, 2f);
+        ChangeWeapon(1);
         SetProperty(weapon);
     }
 
@@ -58,7 +58,7 @@ public class PlayerController : MonoBehaviour
                 break;
             case 2:
                 Debug.Log("2");
-                weapon = new Weapon(DanNo, playerInfo.dame, 1f, 1f);
+                weapon = new Weapon(DanNo, playerInfo.dame, 1f, 0.5f);
                 SetProperty(weapon);
                 break;
             case 3:
