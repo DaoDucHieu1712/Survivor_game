@@ -65,8 +65,6 @@ public class BossController : MonoBehaviour
             //boss.transform.localScale = bossBody;
         }
 
-
-
     }
 
     private IEnumerator MoveToPlayer(GameObject target)

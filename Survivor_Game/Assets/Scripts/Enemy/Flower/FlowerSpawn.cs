@@ -12,7 +12,8 @@ public class FlowerSpawn : MonoBehaviour
 	////public Slider healthSlider;
 	public GameObject prefabTarget;
 	public float moveSpeed = 2f;
-	private float timeSinceLastSpawn = 4f;
+    public float spawnInterval = 4f;
+    private float timeSinceLastSpawn = 4f;
 	public GameObject hpPrefab;
 	public GameObject expPrefab;
 	public GameObject expUntilPrefab;
@@ -52,7 +53,7 @@ public class FlowerSpawn : MonoBehaviour
 		GameObject newPrefabTarget = Instantiate(prefabTarget, targetPos, Quaternion.identity);
 
 		//Get the current level of the player
-		float playerLevel = player.GetComponent<PlayerInfomation>().level;
+		float playerLevel = player.GetComponent<PlayerInfomation>().lv;
 
 		// Increase the health of the new target based on the player level
 		float targetHealth = 20 + playerLevel * 3;
