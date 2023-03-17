@@ -1514,6 +1514,40 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< Updated upstream
+=======
+--- !u!114 &1636360503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636360501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4e337d6d1543cd41ba5044e74f4aa87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabTarget: {fileID: 4296962338409670344, guid: 8c718396742b26843b96c5a88303e5cc, type: 3}
+  moveSpeed: 2
+  hpPrefab: {fileID: 1329701486109212204, guid: 6d7052b0a145a624698a70ee5a8e1435, type: 3}
+  expPrefab: {fileID: 3171195719715793506, guid: f0dba686295f79f4f91b1817ceec0889, type: 3}
+  expUntilPrefab: {fileID: 1266805463358543808, guid: 6459758d7d3a13a49bedb36ebf8d93fa, type: 3}
+--- !u!114 &1636360504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636360501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27b5db7514f64c946a5382f0787f4007, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabTarget: {fileID: 0}
+  spawnInterval: 4
+>>>>>>> Stashed changes
 --- !u!4 &1636360505
 Transform:
   m_ObjectHideFlags: 0
