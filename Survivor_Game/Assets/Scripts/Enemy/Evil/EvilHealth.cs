@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EvilProperty : MonoBehaviour
+public class EvilHealth: MonoBehaviour
 {
-    public float maxHealth = 30;
-    public float currentHealth;
+    public int maxHealth = 30;
+    public int currentHealth;
 
     public EvilHealthBar healthBar;
 
@@ -22,7 +22,7 @@ public class EvilProperty : MonoBehaviour
        
     }
 
-    public void TakeDamage(float damage)
+    public void TakeDamage(int damage)
     {
         currentHealth -= damage;
 

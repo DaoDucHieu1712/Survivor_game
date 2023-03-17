@@ -468,7 +468,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -492,8 +492,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a81111c28bc594fb6d87a0927c1318, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 7851382361582335685}
   speed: 2
+  rotationSpeed: 100
   joystick: {fileID: 0}
 --- !u!114 &8553614862142485025
 MonoBehaviour:
@@ -519,12 +519,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c6f1e0a37c04194292e8fcc864eebc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DanThuong: {fileID: 8622149321135767779, guid: ea58fa842e694d94cbde548e7eb83d9e, type: 3}
-  DanNo: {fileID: 1266805463358543808, guid: 6459758d7d3a13a49bedb36ebf8d93fa, type: 3}
-  DanXuyen: {fileID: 0}
-  DanUltimate: {fileID: 0}
-  bulletSpeed: 10
-  spawnDelay: 1
+  DanThuong: {fileID: 8550073341852849716, guid: ea58fa842e694d94cbde548e7eb83d9e, type: 3}
+  DanNo: {fileID: 4643453627139593212, guid: 6459758d7d3a13a49bedb36ebf8d93fa, type: 3}
+  DanXuyen: {fileID: 5035192628889467886, guid: bd754bdbee1a68148bfe5118c9de4d51, type: 3}
+  DanUltimate: {fileID: 8874364673681146318, guid: 3991465d03f36364cb97e21af4158b18, type: 3}
 --- !u!50 &7851382361582335689
 Rigidbody2D:
   serializedVersion: 4
@@ -584,6 +582,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 749ea4eb193909941bc81ae860e0912e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dame: 10
+  hp: 50
+  exp: 10.825
+  level: 1
   currentHealth: 0
   healthBar: {fileID: 2786947540183150799}
 --- !u!1 &7851382361606127722

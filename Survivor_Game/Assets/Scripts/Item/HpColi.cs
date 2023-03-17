@@ -12,7 +12,7 @@ public class HpColi : MonoBehaviour
             PlayerInfomation player = collision.gameObject.GetComponent<PlayerInfomation>();
             FlowerProperti flower = collision.gameObject.GetComponent<FlowerProperti>();
 
-            if (player.currentHealth < player.Hp)
+            if (player.currentHealth < player.hp)
             {
                 player.EatHP(10);
             }

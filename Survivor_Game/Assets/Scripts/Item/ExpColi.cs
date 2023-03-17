@@ -8,7 +8,8 @@ public class ExpColi : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Exp"))
+
+        if (collision.gameObject.name.Equals("Player"))
         {
             pl = collision.gameObject.GetComponent<PlayerInfomation>();
             pl.EatExp(4);
