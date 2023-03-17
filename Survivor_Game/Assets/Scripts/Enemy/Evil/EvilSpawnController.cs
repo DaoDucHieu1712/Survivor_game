@@ -6,6 +6,9 @@ public class EvilSpawnController : MonoBehaviour
 {
     public GameObject evilPrefab;
     public float spawnDelay = 2f;
+    public GameObject hpPrefab;
+    public GameObject expPrefab;
+    public GameObject expUntilPrefab;
 
     private void Start()
     {

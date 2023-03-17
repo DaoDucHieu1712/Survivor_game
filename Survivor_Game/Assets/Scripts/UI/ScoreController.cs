@@ -18,9 +18,17 @@ public class ScoreController : MonoBehaviour
     }
 
     // Update is called once per frame
+<<<<<<< Updated upstream
     public void IncrementScore()
     {
         Score += pl.lv * 4;
         ui.SetCoreText("Score : " + Score);
     }
+=======
+    //public void IncrementScore()
+    //{
+    //    Score += pl.Lv * 4;
+    //    ui.SetCoreText("Score : " + Score);
+    //}
+>>>>>>> Stashed changes
 }
