@@ -16,7 +16,6 @@ public class HpColi : MonoBehaviour
             {
                 player.EatHP(10);
             }
-
             Destroy(gameObject);
 
         }

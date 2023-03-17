@@ -13,7 +13,7 @@ public class ExpColi : MonoBehaviour
         {
             pl = collision.gameObject.GetComponent<PlayerInfomation>();
             pl.EatExp(4);
-            Destroy(collision.gameObject);
+            Destroy(gameObject);
         }
     }
 }
