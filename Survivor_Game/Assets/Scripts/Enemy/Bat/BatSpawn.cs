@@ -6,8 +6,15 @@ public class BatSpawn : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject prefabTarget;
+    public float moveSpeed = 10f;
     public float spawnInterval = 4f;
-    private float timeSinceLastSpawn;
+    private float timeSinceLastSpawn = 4f;
+    public GameObject hpPrefab;
+    public GameObject expPrefab;
+    public GameObject expUntilPrefab;
+
+    private GameObject player; // Reference to the player object
+
     void Start()
     {
         // Find the player object using its tag
@@ -47,12 +54,8 @@ public class BatSpawn : MonoBehaviour
 
         // Increase the health of the new target based on the player level
         float targetHealth = 20 + playerLevel * 3;
-        newPrefabTarget.GetComponent<FlowerProperti>().MaxHealth = targetHealth;
-        newPrefabTarget.GetComponent<FlowerProperti>().CurrentHealth = targetHealth;
-
-        Debug.Log("Level cua player" + playerLevel);
-        Debug.Log("Mac heo " + newPrefabTarget.GetComponent<FlowerProperti>().MaxHealth);
-        Debug.Log("Suc khoe" + newPrefabTarget.GetComponent<FlowerProperti>().CurrentHealth);
+        newPrefabTarget.GetComponent<BatProperty>().MaxHealth = targetHealth;
+        newPrefabTarget.GetComponent<BatProperty>().CurrentHealth = targetHealth;
 
 
         // Increase the damage of the new target based on the player level
