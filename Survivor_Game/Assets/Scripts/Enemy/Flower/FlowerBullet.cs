@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class FlowerBullet : MonoBehaviour
 {
-	
-
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
 		if (collision.gameObject.name.Equals("Player"))
@@ -16,7 +14,7 @@ public class FlowerBullet : MonoBehaviour
 
 			if (player.currentHealth > 0)
 			{
-				player.TakeDamage(flower.Damage);
+				player.TakeDamage(4);
 			}
 
 			Destroy(gameObject);

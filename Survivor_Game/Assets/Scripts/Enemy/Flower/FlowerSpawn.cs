@@ -58,18 +58,18 @@ public class FlowerSpawn : MonoBehaviour
 		float playerLevel = player.GetComponent<PlayerInfomation>().lv;
 
 		// Increase the health of the new target based on the player level
-		float targetHealth = 20 + playerLevel * 3;
-		newPrefabTarget.GetComponent<FlowerProperti>().MaxHealth = targetHealth;
-		newPrefabTarget.GetComponent<FlowerProperti>().CurrentHealth = targetHealth;
+		//float targetHealth = 20 + playerLevel * 3;
+		//newPrefabTarget.GetComponent<FlowerProperti>().MaxHealth = targetHealth;
+		//newPrefabTarget.GetComponent<FlowerProperti>().CurrentHealth = targetHealth;
 
-		Debug.Log("Level cua player" + playerLevel);
-		Debug.Log("Mac heo " + newPrefabTarget.GetComponent<FlowerProperti>().MaxHealth);
-		Debug.Log("Suc khoe" + newPrefabTarget.GetComponent<FlowerProperti>().CurrentHealth);
+		//Debug.Log("Level cua player" + playerLevel);
+		//Debug.Log("Mac heo " + newPrefabTarget.GetComponent<FlowerProperti>().MaxHealth);
+		//Debug.Log("Suc khoe" + newPrefabTarget.GetComponent<FlowerProperti>().CurrentHealth);
 	
 
 		// Increase the damage of the new target based on the player level
-		float targetDamage = 2 + playerLevel;
-		newPrefabTarget.GetComponent<FlowerProperti>().Damage = targetDamage;
+		//float targetDamage = 2 + playerLevel;
+		//newPrefabTarget.GetComponent<FlowerProperti>().Damage = targetDamage;
 
 		// Calculate the spawn interval based on the player level
 
@@ -133,6 +133,5 @@ public class FlowerSpawn : MonoBehaviour
 			yield return null;
 		}
 	}
-
 
 }

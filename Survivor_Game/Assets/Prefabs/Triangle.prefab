@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 4803820676961818601}
   - component: {fileID: 1103775448392963494}
   - component: {fileID: 1132038219796480963}
-  - component: {fileID: 4199164082953720756}
-  - component: {fileID: 4553736157196417509}
   - component: {fileID: 2535003100555523711}
+  - component: {fileID: 6933860688521287399}
+  - component: {fileID: 6265734188384965663}
   m_Layer: 0
   m_Name: Triangle
   m_TagString: Flower
@@ -31,7 +31,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.832, y: -0.06, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8347613107260691655}
   - {fileID: 6592750215899802477}
@@ -113,37 +113,6 @@ CircleCollider2D:
   m_Offset: {x: 0.00000035762787, y: 0.0049984455}
   serializedVersion: 2
   m_Radius: 1.4078724
---- !u!114 &4199164082953720756
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 150712782577685588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ea9fec70bc752542afe5a43117ee25a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 6007182752966284585, guid: 069d8e7ab25e7ed4eb142615b2a0ecf4, type: 3}
-  fireRate: 2.5
-  bulletSpeed: 5
-  bulletLifetime: 5
-  dame: 5
-  hp: 20
---- !u!114 &4553736157196417509
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 150712782577685588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d90deee36974a546a0591a579b743af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthBar: {fileID: 1843968694912825247}
 --- !u!50 &2535003100555523711
 Rigidbody2D:
   serializedVersion: 4
@@ -165,6 +134,37 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &6933860688521287399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150712782577685588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efe31bb4cf2f3c3489eae598b4de3816, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 1843968694912825247}
+--- !u!114 &6265734188384965663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150712782577685588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0945d13ccb11884c81326d7b05c06b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 6007182752966284585, guid: 069d8e7ab25e7ed4eb142615b2a0ecf4, type: 3}
+  fireRate: 2.5
+  bulletSpeed: 5
+  bulletLifetime: 2
+  dame: 5
+  hp: 20
 --- !u!1 &1035125491126396106
 GameObject:
   m_ObjectHideFlags: 0
