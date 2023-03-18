@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 1103775448392963494}
   - component: {fileID: 1132038219796480963}
   - component: {fileID: 2535003100555523711}
-  - component: {fileID: 3178210097168272221}
-  - component: {fileID: 558680397058220991}
+  - component: {fileID: 6933860688521287399}
+  - component: {fileID: 6265734188384965663}
   m_Layer: 0
   m_Name: Triangle
   m_TagString: Flower
@@ -31,7 +31,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.832, y: -0.06, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8347613107260691655}
   - {fileID: 6592750215899802477}
@@ -134,7 +134,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &3178210097168272221
+--- !u!114 &6933860688521287399
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 1843968694912825247}
---- !u!114 &558680397058220991
+--- !u!114 &6265734188384965663
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

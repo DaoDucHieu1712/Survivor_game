@@ -38,15 +38,15 @@ public class BossController : MonoBehaviour
         float bot = bottomLeft.y;
         Vector3 targetPos = new Vector3(Random.Range(right, left), Random.Range(top, bot), 0);
 
-        int randb = Random.Range(1, 5);
+        int randb = Random.Range(1, 4);
         GameObject boss;
         Vector3 bossBody = new Vector3(0.4f, 0.4f, 0);
-        if (randb == 2)
+        if (randb == 1)
         {
             boss = Instantiate(_bat, targetPos, Quaternion.identity);
             boss.GetComponent<BatProperty>().Damage = boss.GetComponent<BatProperty>().Damage * 2;
             boss.GetComponent<BatProperty>().CurrentHealth = boss.GetComponent<BatProperty>().CurrentHealth * 5;
-            boss.transform.localScale = new Vector3(20f, 20f, 0);
+            boss.transform.localScale = new Vector3(200f, 200f, 0);
         }
         else if (randb == 3)
         {
@@ -56,13 +56,13 @@ public class BossController : MonoBehaviour
             boss.transform.localScale = bossBody;
             StartCoroutine(MoveToPlayer(_flower));
         }
-        else if (randb == 4)
+        else if (randb == 2)
         {
             boss = Instantiate(_evil, targetPos, Quaternion.identity);
             boss.GetComponent<EvilShoot>().dame = boss.GetComponent<EvilShoot>().dame * 3;
             boss.GetComponent<EvilShoot>().hp = boss.GetComponent<EvilShoot>().hp * 4;
-            boss.transform.localScale = new Vector3(1.5f, 1.5f, 0);
-            //boss.transform.localScale = bossBody;
+            boss.transform.localScale = bossBody;
+
         }
 
     }

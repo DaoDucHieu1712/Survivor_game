@@ -666,8 +666,8 @@ GameObject:
   - component: {fileID: 7776850291477627709}
   - component: {fileID: -734023297165082212}
   - component: {fileID: -4308962162962246561}
-  - component: {fileID: 4031607069901319204}
-  - component: {fileID: 3518950161055186947}
+  - component: {fileID: 4827625267698850315}
+  - component: {fileID: 9209715695060259169}
   m_Layer: 0
   m_Name: Flower
   m_TagString: Flower
@@ -684,8 +684,8 @@ Transform:
   m_GameObject: {fileID: 4296962338409670344}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.184, y: 1.028, z: -10}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.01, y: 0.01, z: 0.049999997}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6049889775444706522}
   - {fileID: 8708093015001327784}
@@ -750,7 +750,9 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.93509, y: 6.5469723}
   m_EdgeRadius: 0
---- !u!114 &4031607069901319204
+
+--- !u!114 &4827625267698850315
+
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -768,7 +770,9 @@ MonoBehaviour:
   bulletLifetime: 2
   dame: 5
   hp: 20
---- !u!114 &3518950161055186947
+
+--- !u!114 &9209715695060259169
+
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
