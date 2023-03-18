@@ -64,7 +64,6 @@ public class FlowerProperti : MonoBehaviour
 				Instantiate(flowerSpawn.expPrefab, transform.position, Quaternion.identity);
 			}
 			else // 20% chance to spawn expuntilPrefab
-
 			{
 				Instantiate(flowerSpawn.expUntilPrefab, transform.position, Quaternion.identity);
 			}

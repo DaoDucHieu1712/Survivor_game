@@ -219,6 +219,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 149841476}
   m_CullTransparentMesh: 1
+--- !u!1 &203729170
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 203729172}
+  - component: {fileID: 203729171}
+  m_Layer: 0
+  m_Name: UI Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &203729171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 203729170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44e39f561ad5c3a438ed1613175bdebd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 0}
+  gameoverPanel: {fileID: 0}
+  Bullet1: {fileID: 824582734}
+  Bullet2: {fileID: 1019528363}
+  Bullet3: {fileID: 589571732}
+  Bullet4: {fileID: 1548164251}
+--- !u!4 &203729172
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 203729170}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.7078607, y: 0.8176905, z: -8.3067465}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &307515748 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7851382361582335685, guid: 1b588a2dd3527cc4f8174c58d0c7aa9e, type: 3}
@@ -317,7 +367,7 @@ GameObject:
   - component: {fileID: 589571733}
   - component: {fileID: 589571732}
   m_Layer: 5
-  m_Name: Skill 3
+  m_Name: Bullet 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -439,7 +489,7 @@ GameObject:
   - component: {fileID: 824582735}
   - component: {fileID: 824582734}
   m_Layer: 5
-  m_Name: Skill 1
+  m_Name: Bullet 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -751,7 +801,7 @@ GameObject:
   - component: {fileID: 1019528364}
   - component: {fileID: 1019528363}
   m_Layer: 5
-  m_Name: Skill 2
+  m_Name: Bullet 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1247,9 +1297,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1513280441}
+  - component: {fileID: 1513280444}
+  - component: {fileID: 1513280443}
   - component: {fileID: 1513280442}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Spawn Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1277,14 +1329,45 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1513280440}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4e337d6d1543cd41ba5044e74f4aa87, type: 3}
+  m_Script: {fileID: 11500000, guid: 854aea70f7fd73c4fab03038d7db1d24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   prefabTarget: {fileID: 4296962338409670344, guid: 8c718396742b26843b96c5a88303e5cc, type: 3}
-  spawnInterval: 6
   moveSpeed: 2
+  hpPrefab: {fileID: 1329701486109212204, guid: 6d7052b0a145a624698a70ee5a8e1435, type: 3}
+  expPrefab: {fileID: 3171195719715793506, guid: f0dba686295f79f4f91b1817ceec0889, type: 3}
+  expUntilPrefab: {fileID: 3171195719715793506, guid: f0dba686295f79f4f91b1817ceec0889, type: 3}
+--- !u!114 &1513280443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513280440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38527d59568b19f49bc68b960f36ea8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabTarget: {fileID: 6242835439835695057, guid: c69ef27eb34242543a847361ff59ee6b, type: 3}
+  spawnInterval: 4
+--- !u!114 &1513280444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513280440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2860eb2c2ac1e2140ab5010d8c7184c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabTarget: {fileID: 3880152349798100982, guid: 5c34b247d8595124db7a0573813a992b, type: 3}
+  spawnInterval: 2
+  moveSpeed: 10
 --- !u!1 &1548164249
 GameObject:
   m_ObjectHideFlags: 0
@@ -1298,7 +1381,7 @@ GameObject:
   - component: {fileID: 1548164252}
   - component: {fileID: 1548164251}
   m_Layer: 5
-  m_Name: Skill 4
+  m_Name: Bullet 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1654,6 +1737,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7851382361582335686, guid: 1b588a2dd3527cc4f8174c58d0c7aa9e, type: 3}
+      propertyPath: DanNo
+      value: 
+      objectReference: {fileID: 4643453627139593212, guid: 6459758d7d3a13a49bedb36ebf8d93fa, type: 3}
+    - target: {fileID: 7851382361582335686, guid: 1b588a2dd3527cc4f8174c58d0c7aa9e, type: 3}
+      propertyPath: DanXuyen
+      value: 
+      objectReference: {fileID: 5035192628889467886, guid: bd754bdbee1a68148bfe5118c9de4d51, type: 3}
+    - target: {fileID: 7851382361582335686, guid: 1b588a2dd3527cc4f8174c58d0c7aa9e, type: 3}
+      propertyPath: DanThuong
+      value: 
+      objectReference: {fileID: 8550073341852849716, guid: ea58fa842e694d94cbde548e7eb83d9e, type: 3}
+    - target: {fileID: 7851382361582335686, guid: 1b588a2dd3527cc4f8174c58d0c7aa9e, type: 3}
+      propertyPath: DanUltimate
+      value: 
+      objectReference: {fileID: 8874364673681146318, guid: 3991465d03f36364cb97e21af4158b18, type: 3}
     - target: {fileID: 7851382361582335687, guid: 1b588a2dd3527cc4f8174c58d0c7aa9e, type: 3}
       propertyPath: joystick
       value: 

@@ -6,7 +6,7 @@ public class EvilController : MonoBehaviour
 {
     public float movementSpeed = 5f;
     public float desiredDistance = 5f;
-    public float bulletSpeed = 2f;
+    public float bulletSpeed = 3f;
     public float bulletLifetime = 2f;
     public GameObject EvilBullet;
 
@@ -14,6 +14,7 @@ public class EvilController : MonoBehaviour
     private bool canShoot = false;
     private float shootTimer = 0f;
     private float shootDelay = 2f; // time between shots in seconds
+    private float distanceTimer = 0.05f;
 
     private void Start()
     {
@@ -21,16 +22,20 @@ public class EvilController : MonoBehaviour
     }
     private void Update()
     {
-        float distance = Vector3.Distance(transform.position, player.transform.position);
-
-        if (distance > desiredDistance)
+        distanceTimer -= Time.deltaTime;
+        if (distanceTimer <= 0)
         {
-            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, movementSpeed * Time.deltaTime);
-            canShoot = false;
-        }
-        else
-        {
-            canShoot = true;
+            float distance = Vector3.Distance(transform.position, player.transform.position);
+            if (distance > desiredDistance)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, player.transform.position, movementSpeed * Time.deltaTime);
+                canShoot = false;
+            }
+            else
+            {
+                canShoot = true;
+            }
+            distanceTimer = 0.05f;
         }
 
         if (canShoot)
