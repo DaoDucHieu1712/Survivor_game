@@ -978,8 +978,8 @@ Canvas:
   m_GameObject: {fileID: 1144103885}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 977311502}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -1336,6 +1336,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabTarget: {fileID: 4296962338409670344, guid: 8c718396742b26843b96c5a88303e5cc, type: 3}
   moveSpeed: 2
+  spawnInterval: 4
   hpPrefab: {fileID: 1329701486109212204, guid: 6d7052b0a145a624698a70ee5a8e1435, type: 3}
   expPrefab: {fileID: 3171195719715793506, guid: f0dba686295f79f4f91b1817ceec0889, type: 3}
   expUntilPrefab: {fileID: 3171195719715793506, guid: f0dba686295f79f4f91b1817ceec0889, type: 3}
@@ -1351,8 +1352,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38527d59568b19f49bc68b960f36ea8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabTarget: {fileID: 6242835439835695057, guid: c69ef27eb34242543a847361ff59ee6b, type: 3}
-  spawnInterval: 4
 --- !u!114 &1513280444
 MonoBehaviour:
   m_ObjectHideFlags: 0
