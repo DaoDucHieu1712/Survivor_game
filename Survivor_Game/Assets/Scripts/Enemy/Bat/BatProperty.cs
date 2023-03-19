@@ -5,7 +5,7 @@ using UnityEngine;
 public class BatProperty : MonoBehaviour
 {
     // Start is called before the first frame update
-    private float maxHealth = 20;
+    private float maxHealth = 25;
     private float currentHealth;
     private float damage = 5;
     public HealthBar healthBar;
@@ -46,15 +46,15 @@ public class BatProperty : MonoBehaviour
             // Randomly select a prefab to spawn (1 in 3 chance for each type)
 
             float rand = Random.value;
-            if (rand < 0.4f) // 40% chance to spawn hpPrefab
+            if (rand < 0.3f) // 30% chance to spawn hpPrefab
             {
                 Instantiate(flowerSpawn.hpPrefab, transform.position, Quaternion.identity);
             }
-            else if (rand < 0.8f) // 40% chance to spawn expPrefab
+            else if (rand < 0.6f) // 60% chance to spawn expPrefab
             {
                 Instantiate(flowerSpawn.expPrefab, transform.position, Quaternion.identity);
             }
-            else // 20% chance to spawn expuntilPrefab
+            else // 10% chance to spawn expuntilPrefab
 
             {
                 Instantiate(flowerSpawn.expUntilPrefab, transform.position, Quaternion.identity);
