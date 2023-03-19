@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EvilController : MonoBehaviour
 {
-    public float movementSpeed = 5f;
+    public float movementSpeed = 100f;
     public float desiredDistance = 5f;
     public float bulletSpeed = 3f;
     public float bulletLifetime = 2f;
