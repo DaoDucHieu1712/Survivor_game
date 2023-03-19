@@ -750,9 +750,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.93509, y: 6.5469723}
   m_EdgeRadius: 0
-
 --- !u!114 &4827625267698850315
-
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -770,9 +768,7 @@ MonoBehaviour:
   bulletLifetime: 2
   dame: 5
   hp: 20
-
 --- !u!114 &9209715695060259169
-
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
