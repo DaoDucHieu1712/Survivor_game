@@ -5,9 +5,9 @@ using UnityEngine;
 public class BatProperty : MonoBehaviour
 {
     // Start is called before the first frame update
-    private float maxHealth = 25;
-    private float currentHealth;
-    private float damage = 5;
+    public float maxHealth = 25;
+    public float currentHealth;
+    public float damage = 5;
     public HealthBar healthBar;
 
     public float MaxHealth { get => maxHealth; set => maxHealth = value; }
