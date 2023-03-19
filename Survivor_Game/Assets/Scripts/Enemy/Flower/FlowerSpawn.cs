@@ -26,7 +26,8 @@ public class FlowerSpawn : MonoBehaviour
 		player = GameObject.FindGameObjectWithTag("Player");
 	}
 
-	void Update()
+
+    void Update()
 	{
 		// Get the current level of the player
 		float playerLevel = player.GetComponent<PlayerInfomation>().lv;

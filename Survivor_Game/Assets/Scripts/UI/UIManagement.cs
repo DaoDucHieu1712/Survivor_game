@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class UIManagement : MonoBehaviour
 {
     public Text scoreText;
+    public Text lvText;
     public GameObject gameoverPanel;
     public Button Bullet1;
     public Button Bullet2;

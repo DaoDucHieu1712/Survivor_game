@@ -1,9 +1,5 @@
-﻿
-
-using System;
-
+﻿using System;
 using UnityEngine;
-
 using static UnityEngine.EventSystems.EventTrigger;
 using static UnityEngine.RuleTile.TilingRuleOutput;
 
@@ -50,7 +46,6 @@ public class TriggerBullet : MonoBehaviour {
                     HandlerDanUltimate(damePlayer, enemy);
                     break;
             }
-
         }
     }
 

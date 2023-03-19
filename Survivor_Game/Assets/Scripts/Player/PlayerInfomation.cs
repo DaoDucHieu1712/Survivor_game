@@ -44,39 +44,6 @@ public class PlayerInfomation : MonoBehaviour
 		healthBar.SetMaxHealth(hp);
 	}
 
-
-
-	//public void IncreaseExp(float amount)
-	//{
-	//	exp += amount;
-	//	Debug.Log("Dame hien tai" + dame);
-		
-	//	Debug.Log("exp dang co" + exp);
-	//	while (exp >= CalculateExpForNextLevel())
-	//	{
-	//		LevelUp();
-
-
-	//	}
-	//}
-
-	//private void LevelUp()
-	//{
-	//	level++;
-	//	Debug.Log("Level up! New level: " + level);
-	//	dame *= 1.2f;
-	//	Debug.Log("dame up" + dame);
-	//	currentHealth += 15f;
-	//	healthBar.SetHealth(currentHealth);
-
-		
-	//}
-
-	//private float CalculateExpForNextLevel()
-	//{
-	//	return 10f * Mathf.Pow(1.05f, level);
-	//}
-
 	public void Update()
 	{
 		if (Exp >= MaxExp)
