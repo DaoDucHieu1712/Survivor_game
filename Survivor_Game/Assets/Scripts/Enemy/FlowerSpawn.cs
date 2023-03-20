@@ -40,8 +40,28 @@ public class FlowerSpawn : MonoBehaviour
 		}
 	}
 
-	private void SetNewTargetPos()
+    private void SetNewTargetPos()
+    {
+        // Get the corners of the camera's viewport
+        Vector3 topRight = Camera.main.ViewportToWorldPoint(new Vector3(1, 1, Camera.main.nearClipPlane));
+        Vector3 bottomLeft = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, Camera.main.nearClipPlane));
+
+        // Generate a random position between the corners
+        Vector3 randomPos = new Vector3(Random.Range(bottomLeft.x, topRight.x), Random.Range(bottomLeft.y, topRight.y), 0);
+
+        // Instantiate the prefabTarget at the random position
+        GameObject newPrefabTarget = Instantiate(prefabTarget, randomPos, Quaternion.identity);
+
+        // Start a coroutine to move the prefabTarget towards the player after 3 seconds
+        StartCoroutine(MoveToPlayer(newPrefabTarget));
+    }
+
+
+
+
+    private IEnumerator MoveToPlayer(GameObject target)
 	{
+<<<<<<< Updated upstream:Survivor_Game/Assets/Scripts/Enemy/FlowerSpawn.cs
 		Vector3 topRight = Camera.main.ViewportToWorldPoint(new Vector3(1, 1, Camera.main.nearClipPlane));
 		Vector3 bottomLeft = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, Camera.main.nearClipPlane));
 		float right = topRight.x;
@@ -84,6 +104,9 @@ public class FlowerSpawn : MonoBehaviour
 	private IEnumerator MoveToPlayer(GameObject target)
 	{
 		yield return new WaitForSeconds(3f); // Wait for 3 seconds
+=======
+		yield return new WaitForSeconds(2f); // Wait for 2 seconds
+>>>>>>> Stashed changes:Survivor_Game/Assets/Scripts/Enemy/Flower/FlowerSpawn.cs
 
 		Vector3 prevPlayerPos = player.transform.position;
 		bool isMovingToPlayer = true;
@@ -134,4 +157,8 @@ public class FlowerSpawn : MonoBehaviour
 	}
 
 
+<<<<<<< Updated upstream:Survivor_Game/Assets/Scripts/Enemy/FlowerSpawn.cs
+=======
+
+>>>>>>> Stashed changes:Survivor_Game/Assets/Scripts/Enemy/Flower/FlowerSpawn.cs
 }
