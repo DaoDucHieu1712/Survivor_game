@@ -402,6 +402,7 @@ GameObject:
   - component: {fileID: 3604036426174417586}
   - component: {fileID: 3604036426174417587}
   - component: {fileID: 3604036426174417596}
+  - component: {fileID: 2669306027288191243}
   m_Layer: 0
   m_Name: Evil
   m_TagString: Evil
@@ -568,4 +569,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 140eef621ef5f3d44b762d8361dd14fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 30
+  currentHealth: 0
+  damage: 4
   healthBar: {fileID: 3604036425488187332}
+--- !u!114 &2669306027288191243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3604036426174417597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d276dae86c3f26844b963184eb1803c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

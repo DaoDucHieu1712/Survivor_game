@@ -8,7 +8,7 @@ public class EvilHealth: MonoBehaviour
     public int currentHealth;
 
     public EvilHealthBar healthBar;
-
+  
     // Start is called before the first frame update
     void Start()
     {

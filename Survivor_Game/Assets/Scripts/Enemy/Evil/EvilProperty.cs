@@ -9,11 +9,10 @@ public class EvilProperty : MonoBehaviour
 
     // Start is called before the first frame update
 
-    private float maxHealth = 30;
-    private float currentHealth;
-    private float damage = 4;
+    public float maxHealth = 30;
+    public float currentHealth;
+    public float damage = 4;
     public EvilHealthBar healthBar;
-
 
     public float MaxHealth { get => maxHealth; set => maxHealth = value; }
     public float CurrentHealth { get => currentHealth; set => currentHealth = value; }
@@ -42,6 +41,7 @@ public class EvilProperty : MonoBehaviour
         healthBar.SetHealth(CurrentHealth);
         if (CurrentHealth <= 0)
         {
+            ScoreController.scoreValue++;
             Destroy(gameObject);
         }
     }

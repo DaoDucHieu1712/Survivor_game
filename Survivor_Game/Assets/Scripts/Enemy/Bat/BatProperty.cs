@@ -34,6 +34,7 @@ public class BatProperty : MonoBehaviour
         healthBar.SetHealth(CurrentHealth);
         if (CurrentHealth <= 0)
         {
+            ScoreController.scoreValue++;
             Destroy(gameObject);
         }
     }
