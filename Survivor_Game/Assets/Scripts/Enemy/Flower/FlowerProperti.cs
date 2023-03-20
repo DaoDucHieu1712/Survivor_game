@@ -42,7 +42,8 @@ public class FlowerProperti : MonoBehaviour
 		healthBar.SetHealth(CurrentHealth);
 		if (CurrentHealth <= 0)
 		{
-			Destroy(gameObject);
+            ScoreController.scoreValue++;
+            Destroy(gameObject);
 		}
 	}
 
