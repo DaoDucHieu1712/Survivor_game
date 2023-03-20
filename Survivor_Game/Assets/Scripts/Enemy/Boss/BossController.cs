@@ -40,7 +40,7 @@ public class BossController : MonoBehaviour
 
         int randb = Random.Range(1, 4);
         GameObject boss;
-        Vector3 bossBody = new Vector3(0.4f, 0.4f, 0);
+        Vector3 bossBody = new Vector3(2.4f, 2.4f, 0);
         if (randb == 1)
         {
             boss = Instantiate(_bat, targetPos, Quaternion.identity);
@@ -52,7 +52,7 @@ public class BossController : MonoBehaviour
         {
             boss = Instantiate(_flower, targetPos, Quaternion.identity);
             boss.GetComponent<FlowerProperti>().Damage = boss.GetComponent<FlowerProperti>().Damage * 2;
-            boss.GetComponent<FlowerProperti>().MaxHealth = boss.GetComponent<FlowerProperti>().MaxHealth * 5;
+            boss.GetComponent<FlowerProperti>().MaxHealth = boss.GetComponent<FlowerProperti>().MaxHealth * 6;
             boss.transform.localScale = bossBody;
             //StartCoroutine(MoveToPlayer(_flower));
         }
