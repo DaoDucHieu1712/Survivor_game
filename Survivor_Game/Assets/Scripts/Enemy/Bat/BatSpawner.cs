@@ -15,7 +15,7 @@ public class BatSpawner : MonoBehaviour
     public GameObject hpPrefab;
     public GameObject expPrefab;
     public GameObject expUntilPrefab;
-    int numberBat = 3;
+    int numberBat = 2;
     void Start()
     {
         // Find the player object using its tag
