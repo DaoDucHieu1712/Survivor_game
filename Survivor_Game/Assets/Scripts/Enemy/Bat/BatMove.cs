@@ -5,7 +5,7 @@ using UnityEngine;
 public class BatMove : MonoBehaviour
 {
     public GameObject player;
-
+    public float speed;
     void Start()
     {
         player = GameObject.FindWithTag("Player");
@@ -13,7 +13,8 @@ public class BatMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, 7f * Time.deltaTime);
+            float playerLevel = player.GetComponent<PlayerInfomation>().lv;
+            speed = 7f - 0.3f * playerLevel;
+            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
     }
 }
