@@ -247,7 +247,8 @@ GameObject:
   - component: {fileID: 8107185529827680227}
   - component: {fileID: 721591304339248754}
   - component: {fileID: 4382732466362394699}
-  - component: {fileID: 960621853195309794}
+  - component: {fileID: -2308324412137075394}
+  - component: {fileID: -659543980869533009}
   m_Layer: 0
   m_Name: Bats 1
   m_TagString: Bat
@@ -300,6 +301,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf8126fd5b5cf3b4cab704bcfcdcd439, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 25
+  currentHealth: 0
+  damage: 5
   healthBar: {fileID: 5510354043459725759}
 --- !u!50 &4382732466362394699
 Rigidbody2D:
@@ -322,8 +326,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!60 &960621853195309794
-PolygonCollider2D:
+--- !u!114 &-2308324412137075394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6134652024203395242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a215af5cefdcd824b9b6c780c6b1c52b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 3060508846967047555, guid: 3918f4c9fdba5104f8dd47b6a4a6e7d6, type: 3}
+--- !u!70 &-659543980869533009
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -332,27 +349,12 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.023243427, y: 0.4189117}
-      - {x: -0.30023724, y: 0.14631227}
-      - {x: -0.5412981, y: -0.7160429}
-      - {x: 0.06043601, y: -0.59982514}
-      - {x: 0.704003, y: -0.646312}
-      - {x: 0.50942945, y: 0.030094564}
+  m_Offset: {x: 0.025721073, y: -0.17379332}
+  m_Size: {x: 1.2722559, y: 1.3881187}
+  m_Direction: 0
 --- !u!1 &7303402777798179962
 GameObject:
   m_ObjectHideFlags: 0

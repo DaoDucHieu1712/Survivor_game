@@ -18,11 +18,12 @@ public class BatSpawner : MonoBehaviour
     void Start()
     {
         // Find the player object using its tag
-        player = GameObject.FindGameObjectWithTag("Player");
+        
     }
 
     void Update()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
         // Get the current level of the player
         float playerLevel = player.GetComponent<PlayerInfomation>().lv;
         spawnInterval = 5f - playerLevel * 0.2f;
@@ -56,15 +57,6 @@ public class BatSpawner : MonoBehaviour
         {
             newPrefabTarget2 = Instantiate(prefabRight, spawnPos, Quaternion.identity);
         }
-
-        // Calculate distance between player and bat
-        Vector3 playerPos = player.transform.position;
-        Vector3 batPos = newPrefabTarget2.transform.position;
-        float distance = Vector3.Distance(playerPos, batPos);
-
-        // Move the bat towards the player with given speed
-        Vector3 direction = (playerPos - batPos).normalized;
-        newPrefabTarget2.transform.position += direction * (distance - speed * Time.deltaTime);
     }
 
 
