@@ -14,7 +14,7 @@ public class BatMove : MonoBehaviour
     void Update()
     {
             float playerLevel = player.GetComponent<PlayerInfomation>().lv;
-            speed = 4f - 0.3f * playerLevel;
+            speed = 2f - 0.3f * playerLevel;
             transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
     }
 }

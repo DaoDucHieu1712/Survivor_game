@@ -9,6 +9,7 @@ public class BatProperty : MonoBehaviour
     public float currentHealth;
     public float damage = 5;
     public HealthBar healthBar;
+    public GameObject ani;
 
     public float MaxHealth { get => maxHealth; set => maxHealth = value; }
     public float CurrentHealth { get => currentHealth; set => currentHealth = value; }
@@ -63,6 +64,9 @@ public class BatProperty : MonoBehaviour
             {
                 Instantiate(flowerSpawn.expUntilPrefab, transform.position, Quaternion.identity);
             }
+            GameObject boom = Instantiate(ani, transform.position, Quaternion.identity);
+            uIManagement.PlayeAudioBoom();
+            Destroy(boom, 2f);
         }
     }
 }

@@ -7,7 +7,7 @@ public class BatColiision : MonoBehaviour
     public float damage;
     public float pushForce = 10f; // Lực đẩy
 
-    private void OnTriggerStay2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.name.Equals("Player"))
         {
