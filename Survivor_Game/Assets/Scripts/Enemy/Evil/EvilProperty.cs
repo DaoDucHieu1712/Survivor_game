@@ -9,9 +9,9 @@ public class EvilProperty : MonoBehaviour
 
     // Start is called before the first frame update
 
-    public float maxHealth = 30;
+    public float maxHealth;
     public float currentHealth;
-    public float damage = 4;
+    public float damage;
     public EvilHealthBar healthBar;
     public float MaxHealth { get => maxHealth; set => maxHealth = value; }
     public float CurrentHealth { get => currentHealth; set => currentHealth = value; }
@@ -64,11 +64,6 @@ public class EvilProperty : MonoBehaviour
             else if (rand < 0.8f) // 40% chance to spawn expPrefab
             {
                 Instantiate(evilSpawnController.expPrefab, transform.position, Quaternion.identity);
-            }
-            else // 20% chance to spawn expuntilPrefab
-
-            {
-                Instantiate(evilSpawnController.expUntilPrefab, transform.position, Quaternion.identity);
             }
         }
     }

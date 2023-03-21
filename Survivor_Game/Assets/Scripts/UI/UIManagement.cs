@@ -45,7 +45,7 @@ public class UIManagement : MonoBehaviour
         Bullet2.onClick.AddListener(ChangeSkill);
         Bullet3.onClick.AddListener(ChangeSkill);
         Bullet4.onClick.AddListener(ChangeSkill);
-        Replay.onClick.AddListener(RestartButton);
+        Replay.onClick.AddListener(ReplayButton);
         MainMenu.onClick.AddListener(MainMenuButton);
         scoreValue = 0;
     }
@@ -129,7 +129,7 @@ public class UIManagement : MonoBehaviour
         }
     }
 
-    public void RestartButton()
+    public void ReplayButton()
     {
         SceneManager.LoadScene("SenceCuaHieu");
         Time.timeScale = 1;
@@ -137,7 +137,7 @@ public class UIManagement : MonoBehaviour
 
     public void MainMenuButton()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("MenuScenes");
     }
 
     public void IncreaseScore()
