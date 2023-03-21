@@ -5,25 +5,21 @@ using UnityEngine;
 public class BatSpawner : MonoBehaviour
 {
     public GameObject prefab; // Prefab của object bat khi spawn ở bên phải màn 
-    public float speed = 5.0f;
-    public float moveSpeed = 10f;
     public float spawnInterval;
     private float timeSinceLastSpawn = 4f;
-    private GameObject player; // Reference to the player object
+    private PlayerInfomation player; // Reference to the player object
     public GameObject hpPrefab;
     public GameObject expPrefab;
-    public GameObject expUntilPrefab;
     void Start()
     {
-        // Find the player object using its tag
-
+        player = FindObjectOfType<PlayerInfomation>();
     }
 
     void Update()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+       
         // Get the current level of the player
-        float playerLevel = player.GetComponent<PlayerInfomation>().lv;
+        float playerLevel = player.Lv;
         spawnInterval = 5f - playerLevel * 0.2f;
         timeSinceLastSpawn += Time.deltaTime;
         if (timeSinceLastSpawn >= spawnInterval)

@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     public GameObject DanNo;
     public GameObject DanXuyen;
     public GameObject DanUltimate;
+    public AudioSource shotSound;
+
 
     Weapon weapon = null;
 
@@ -35,6 +37,7 @@ public class PlayerController : MonoBehaviour
         {
             GameObject bullet = Instantiate(prefabBullet, transform.position, transform.rotation);
             Rigidbody2D bulletRigidbody = bullet.GetComponent<Rigidbody2D>();
+            shotSound.Play();
             bulletRigidbody.AddForce(transform.up * bulletSpeed, ForceMode2D.Impulse);
             nextSpawnTime = Time.time + spawnDelay;
         }
@@ -53,19 +56,19 @@ public class PlayerController : MonoBehaviour
         {
             case 1:
                 Debug.Log("1");
-                weapon = new Weapon(DanThuong, playerInfo.dame, 0.2f, 2f);
+                weapon = new Weapon(DanThuong, playerInfo.dame, 1.2f, 10f);
                 break;
             case 2:
                 Debug.Log("2");
-                weapon = new Weapon(DanNo, playerInfo.dame, 1f, 0.5f);
+                weapon = new Weapon(DanNo, playerInfo.dame, 1f, 10f);
                 break;
             case 3:
                 Debug.Log("3");
-                weapon = new Weapon(DanXuyen, playerInfo.dame / 2, 0.5f, 3f);
+                weapon = new Weapon(DanXuyen, playerInfo.dame / 5, 0.5f, 5f);
                 break;
             case 4:
                 Debug.Log("4");
-                weapon = new Weapon(DanUltimate, playerInfo.dame * 3, 1.5f, 4f);
+                weapon = new Weapon(DanUltimate, playerInfo.dame * 3, 1.5f, 10f);
                 break;
         }
         SetProperty(weapon);

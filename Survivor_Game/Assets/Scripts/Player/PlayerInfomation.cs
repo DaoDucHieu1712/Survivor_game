@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerInfomation : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class PlayerInfomation : MonoBehaviour
 	public float currentHealth;
 	public float maxExp = 100;
 
-	public HealthBar healthBar;
+    public HealthBar healthBar;
 
 	UIManagement ui;
     bool isGameOver;
@@ -49,22 +50,33 @@ public class PlayerInfomation : MonoBehaviour
 		ui = FindObjectOfType<UIManagement>();
 		currentHealth = hp;
 		healthBar.SetMaxHealth(hp);
-	}
+        ui.Bullet1.interactable = false;
+        ui.Bullet2.interactable = false;
+        ui.Bullet3.interactable = false;
+		ui.Bullet4.interactable = false;
+    }
 
-	public void Update()
+    public void Update()
 	{
 		if (Exp >= MaxExp)
 		{
 			Lv++;
-			MaxExp = MaxExp * 1.8f;
-			Dame = Dame * 1.4f;
-			Hp = Hp * 1.3f;
+			MaxExp = (float)(10 * Math.Pow(1.05, lv));
+			Dame = Dame * 1.015f;
+			Hp = Hp * 1.025f;
+			Exp = 0;
 		}
-		if (Hp == 0)
+		ui.SetExpText(Math.Floor(Exp).ToString(), Math.Floor(MaxExp).ToString());
+		ui.SetLevelText(Lv.ToString());
+		if(Lv == 6)
 		{
-			//Game over
+            ui.Bullet2.interactable = true;
+            ui.Bullet3.interactable = true;
 		}
-	}
+		else if(Lv == 10){
+            ui.Bullet4.interactable = true;
+        }
+    }
 
 	public void TakeDamage(float damage)
 	{
