@@ -73,8 +73,7 @@ public class PlayerInfomation : MonoBehaviour
 		healthBar.SetHealth(currentHealth);
 		if (currentHealth <= 0)
 		{
-			IsGameOver = true;
-			ui.ShowGameoverPanel(IsGameOver);
+			ui.ShowGameoverPanel();
 			Time.timeScale = 0;
 		}
 	}

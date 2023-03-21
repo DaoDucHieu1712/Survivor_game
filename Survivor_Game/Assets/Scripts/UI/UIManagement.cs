@@ -24,8 +24,10 @@ public class UIManagement : MonoBehaviour
     public Button Bullet3;
     public Button Bullet4;
     public Button MainMenu;
+    public Button Replay;
 
     public Text txtCoolDown;
+    public Text finalText;
 
     private int scoreValue;
     private int coolDown;
@@ -37,11 +39,13 @@ public class UIManagement : MonoBehaviour
 
     public void Start()
     {
+
         playerController = FindObjectOfType<PlayerController>();
         Bullet1.onClick.AddListener(ChangeSkill);
         Bullet2.onClick.AddListener(ChangeSkill);
         Bullet3.onClick.AddListener(ChangeSkill);
         Bullet4.onClick.AddListener(ChangeSkill);
+        Replay.onClick.AddListener(RestartButton);
         MainMenu.onClick.AddListener(MainMenuButton);
         scoreValue = 0;
     }
@@ -115,12 +119,13 @@ public class UIManagement : MonoBehaviour
         }
     }
 
-    public void ShowGameoverPanel(bool isShow)
+    public void ShowGameoverPanel()
     {
         if (gameoverPanel)
         {
             //scoreText.text = "Score: " + ScoreController.scoreValue;
-            gameoverPanel.SetActive(isShow);
+            finalText.text = "Score: " +  scoreValue;
+            gameoverPanel.SetActive(true);
         }
     }
 
@@ -137,8 +142,7 @@ public class UIManagement : MonoBehaviour
 
     public void IncreaseScore()
     {
-        scoreText.text = "Score: " + ++scoreValue;
+        scoreValue = scoreValue + 1;
+        scoreText.text = "Score: " + scoreValue;
     }
-
-    
 }
