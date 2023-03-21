@@ -15,8 +15,8 @@ public class HpColi : MonoBehaviour
             if (player.currentHealth < player.hp)
             {
                 player.EatHP(10);
+                Destroy(gameObject);
             }
-            Destroy(gameObject);
 
         }
     }

@@ -12,17 +12,17 @@ public class GenerateMap : MonoBehaviour
     public GameObject prefab_hills;
     public GameObject prefab_mountains;
 
-    int map_width = 160;
-    int map_height = 90;
+    int map_width = 240;
+    int map_height = 120;
 
     List<List<int>> noise_grid = new List<List<int>>();
     List<List<GameObject>> tile_grid = new List<List<GameObject>>();
 
     
-    float magnification = 15.0f;
+    float magnification = 10.0f;
 
-    int x_offset = 0; // <- +>
-    int y_offset = 0; // v- +^
+    int x_offset = 0; 
+    int y_offset = 0; 
 
     void Start()
     {
