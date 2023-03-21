@@ -265,7 +265,7 @@ Transform:
   m_GameObject: {fileID: 6134652024203395242}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.1291914, y: 3.4254162, z: -9.608569}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.8250031, y: 1.8250031, z: 1.8250031}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2658543514579133562}
@@ -339,6 +339,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 3060508846967047555, guid: 3918f4c9fdba5104f8dd47b6a4a6e7d6, type: 3}
+  speed: 0
 --- !u!70 &-659543980869533009
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
