@@ -5,18 +5,15 @@ using UnityEngine.UI;
 
 public class ScoreController : MonoBehaviour
 {
-    public static int scoreValue = 0;
-    UIManagement ui;
-    Text score;
+    public int scoreValue = 0;
+    public Text score;
 
     private void Start()
     {
-        ui = FindObjectOfType<UIManagement>();
-        score = ui.scoreText;
     }
     private void Update()
     {
-        score.text = "Score: " + scoreValue;
     }
+    
 
 }

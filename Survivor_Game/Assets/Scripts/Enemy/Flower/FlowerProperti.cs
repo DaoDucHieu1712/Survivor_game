@@ -13,9 +13,10 @@ public class FlowerProperti : MonoBehaviour
     private float currentHealth;
     private float damage = 5;
     public HealthBar healthBar;
-	
+    UIManagement uIManagement;
 
-	public float MaxHealth { get => maxHealth; set => maxHealth = value; }
+
+    public float MaxHealth { get => maxHealth; set => maxHealth = value; }
     public float CurrentHealth { get => currentHealth; set => currentHealth = value; }
     public float Damage { get => damage; set => damage = value; }
 
@@ -24,7 +25,8 @@ public class FlowerProperti : MonoBehaviour
     // Start is called before the first frame update
     void Start()
 	{
-		CurrentHealth = MaxHealth;
+        uIManagement = FindObjectOfType<UIManagement>();
+        CurrentHealth = MaxHealth;
 		healthBar.SetMaxHealth(MaxHealth);
 		
 	}
@@ -42,7 +44,8 @@ public class FlowerProperti : MonoBehaviour
 		healthBar.SetHealth(CurrentHealth);
 		if (CurrentHealth <= 0)
 		{
-            ScoreController.scoreValue++;
+            //ScoreController.scoreValue++;
+            uIManagement.IncreaseScore();
             Destroy(gameObject);
 		}
 	}

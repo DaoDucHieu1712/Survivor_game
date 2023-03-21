@@ -398,11 +398,9 @@ GameObject:
   - component: {fileID: 3604036426174417590}
   - component: {fileID: 3604036426174417591}
   - component: {fileID: 3604036426174417584}
-  - component: {fileID: 3604036426174417585}
   - component: {fileID: 3604036426174417586}
   - component: {fileID: 3604036426174417587}
   - component: {fileID: 3604036426174417596}
-  - component: {fileID: 2669306027288191243}
   m_Layer: 0
   m_Name: Evil
   m_TagString: Evil
@@ -499,21 +497,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &3604036426174417585
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3604036426174417597}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9769d34128e89334aa34a601af603ec3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 30
-  currentHealth: 0
-  healthBar: {fileID: 3604036425488187332}
 --- !u!61 &3604036426174417586
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -573,15 +556,3 @@ MonoBehaviour:
   currentHealth: 0
   damage: 4
   healthBar: {fileID: 3604036425488187332}
---- !u!114 &2669306027288191243
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3604036426174417597}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d276dae86c3f26844b963184eb1803c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
