@@ -31,11 +31,12 @@ public class BatColiision : MonoBehaviour
             damage = 10f - 0.3f * playerLevel;
             player1.TakeDamage(damage);
         }
-    }
 
+  }
     IEnumerator StopPlayer(Rigidbody2D playerRb)
     {
         yield return new WaitForSeconds(0.1f); // Đợi 0.5 giây trước khi dừng player
+
         playerRb.velocity = Vector3.zero; // Dừng player
     }
 }

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerInfomation : MonoBehaviour
 {
@@ -15,7 +16,10 @@ public class PlayerInfomation : MonoBehaviour
 
 	public HealthBar healthBar;
 
-	public delegate void LevelChangedEventHandler(float newLevel);
+	UIManagement ui;
+    bool isGameOver;
+
+    public delegate void LevelChangedEventHandler(float newLevel);
 	public event LevelChangedEventHandler LevelChanged;
 
 	public float Lv
@@ -38,8 +42,11 @@ public class PlayerInfomation : MonoBehaviour
 		set => exp = value;
 	}
 	public float MaxExp { get => maxExp; set => maxExp = value; }
-	void Start()
+    public bool IsGameOver { get => isGameOver; set => isGameOver = value; }
+
+    void Start()
 	{
+		ui = FindObjectOfType<UIManagement>();
 		currentHealth = hp;
 		healthBar.SetMaxHealth(hp);
 	}
@@ -66,7 +73,9 @@ public class PlayerInfomation : MonoBehaviour
 		healthBar.SetHealth(currentHealth);
 		if (currentHealth <= 0)
 		{
-            Application.Quit();
+			IsGameOver = true;
+			ui.ShowGameoverPanel(IsGameOver);
+			Time.timeScale = 0;
 		}
 	}
     public void EatHP(int hp)
@@ -79,6 +88,4 @@ public class PlayerInfomation : MonoBehaviour
 	{
 		Exp += i;
 	}
-
-
 }
