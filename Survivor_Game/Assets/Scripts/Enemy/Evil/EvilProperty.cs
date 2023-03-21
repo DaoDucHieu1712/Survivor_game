@@ -13,16 +13,16 @@ public class EvilProperty : MonoBehaviour
     public float currentHealth;
     public float damage = 4;
     public EvilHealthBar healthBar;
-
     public float MaxHealth { get => maxHealth; set => maxHealth = value; }
     public float CurrentHealth { get => currentHealth; set => currentHealth = value; }
     public float Damage { get => damage; set => damage = value; }
-
+    UIManagement uIManagement;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        uIManagement = FindObjectOfType<UIManagement>();
         CurrentHealth = MaxHealth;
         healthBar.SetMaxHealth(MaxHealth);
 
@@ -41,7 +41,9 @@ public class EvilProperty : MonoBehaviour
         healthBar.SetHealth(CurrentHealth);
         if (CurrentHealth <= 0)
         {
-            ScoreController.scoreValue++;
+            //ScoreController.scoreValue++;
+            uIManagement.IncreaseScore();
+
             Destroy(gameObject);
         }
     }

@@ -1,7 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Serialization;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 
 public class UIManagement : MonoBehaviour
@@ -13,15 +16,20 @@ public class UIManagement : MonoBehaviour
     public Button Bullet2;
     public Button Bullet3;
     public Button Bullet4;
+    public Button MainMenu;
 
+    private int scoreValue;
     // Start is called before the first frame update
 
     public void Start()
     {
+
         Bullet1.onClick.AddListener(ChangeSkill);
         Bullet2.onClick.AddListener(ChangeSkill);
         Bullet3.onClick.AddListener(ChangeSkill);
         Bullet4.onClick.AddListener(ChangeSkill);
+        MainMenu.onClick.AddListener(MainMenuButton);
+        scoreValue = 0;
 
     }
 
@@ -58,8 +66,26 @@ public class UIManagement : MonoBehaviour
     {
         if (gameoverPanel)
         {
+            //scoreText.text = "Score: " + ScoreController.scoreValue;
             gameoverPanel.SetActive(isShow);
         }
     }
 
+    public void RestartButton()
+    {
+        SceneManager.LoadScene("SenceCuaHieu");
+        Time.timeScale = 1;
+    }
+
+    public void MainMenuButton()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void IncreaseScore()
+    {
+        scoreText.text = "Score: " + ++scoreValue;
+    }
+
+    
 }
