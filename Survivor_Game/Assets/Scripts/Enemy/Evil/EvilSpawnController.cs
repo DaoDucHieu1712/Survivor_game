@@ -10,6 +10,8 @@ public class EvilSpawnController : MonoBehaviour
     public GameObject expPrefab;
     PlayerInfomation player;
 
+
+
     private void Start()
     {
         InvokeRepeating("SpawnEvil", spawnDelay, spawnDelay);
