@@ -8,7 +8,7 @@ public class EvilShoot : MonoBehaviour
     [SerializeField]
     public GameObject bulletPrefab;
     public float evilRate = 1f;
-    public float bulletSpeed = 10f;
+    public float bulletSpeed = 30f;
     public float bulletLifetime = 2f;
 
     public float dame = 4;

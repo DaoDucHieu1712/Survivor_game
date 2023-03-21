@@ -5,10 +5,10 @@ using UnityEngine;
 public class EvilSpawnController : MonoBehaviour
 {
     public GameObject evilPrefab;
-    public float spawnDelay = 2f;
+    public float spawnDelay;
     public GameObject hpPrefab;
     public GameObject expPrefab;
-    public GameObject expUntilPrefab;
+    PlayerInfomation player;
 
     private void Start()
     {
@@ -17,6 +17,10 @@ public class EvilSpawnController : MonoBehaviour
 
     private void SpawnEvil()
     {
+        player = FindObjectOfType<PlayerInfomation>();
+        var level = player.Lv;
+        var numEvil = Mathf.FloorToInt(level / 2f) + 0.1;
+        Debug.Log(player.Lv);
         Vector3 topRight = Camera.main.ViewportToWorldPoint(new Vector3(1, 1, Camera.main.nearClipPlane));
         Vector3 bottomLeft = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, Camera.main.nearClipPlane));
         float right = topRight.x;
@@ -26,6 +30,15 @@ public class EvilSpawnController : MonoBehaviour
         Vector3 targetPos = new Vector3(Random.Range(right, left), Random.Range(top, bot), 0);
 
         // Instantiate the prefabTarget at targetPos
-        Instantiate(evilPrefab, targetPos, Quaternion.identity);
+        //for(int i=0; i< level)
+        //Instantiate(evilPrefab, targetPos, Quaternion.identity);
+
+        for (int i = 0; i < numEvil; i++)
+        {
+             targetPos = new Vector3(Random.Range(right, left), Random.Range(top, bot), 0);
+
+            // Instantiate the prefabTarget at targetPos
+            Instantiate(evilPrefab, targetPos, Quaternion.identity);
+        }
     }
 }

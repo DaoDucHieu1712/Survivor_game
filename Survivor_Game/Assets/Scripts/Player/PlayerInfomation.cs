@@ -85,6 +85,7 @@ public class PlayerInfomation : MonoBehaviour
 		healthBar.SetHealth(currentHealth);
 		if (currentHealth <= 0)
 		{
+			Debug.Log("currentHealth");
 			ui.ShowGameoverPanel();
 			Time.timeScale = 0;
 		}
