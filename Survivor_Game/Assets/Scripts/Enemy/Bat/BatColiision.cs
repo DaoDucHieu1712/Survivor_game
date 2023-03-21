@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class BatColiision : MonoBehaviour
 {
-    public int damage = 5;
+    public float damage;
     public float knockbackForce = 50f;
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
@@ -27,6 +27,8 @@ public class BatColiision : MonoBehaviour
             PlayerInfomation player = collision.gameObject.GetComponent<PlayerInfomation>();
             if (player.currentHealth > 0)
             {
+                float playerLevel = player.GetComponent<PlayerInfomation>().lv;
+                damage = 10f - 0.3f * playerLevel;
                 player.TakeDamage(damage);
             }
         }
