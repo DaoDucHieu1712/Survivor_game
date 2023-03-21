@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class BatSpawner : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public GameObject prefabLeft; // Prefab của object bat khi spawn ở bên trái màn hình
-    public GameObject prefabRight; // Prefab của object bat khi spawn ở bên phải màn 
+    public GameObject prefab; // Prefab của object bat khi spawn ở bên phải màn 
     public float speed = 5.0f;
     public float moveSpeed = 10f;
     public float spawnInterval;
@@ -15,11 +13,10 @@ public class BatSpawner : MonoBehaviour
     public GameObject hpPrefab;
     public GameObject expPrefab;
     public GameObject expUntilPrefab;
-    int numberBat = 2;
     void Start()
     {
         // Find the player object using its tag
-        
+
     }
 
     void Update()
@@ -46,26 +43,20 @@ public class BatSpawner : MonoBehaviour
         float bot = bottomLeft.y;
 
         // Spawn position for the bat
-        
-        
+
+
         // Instantiate the prefabTarget2 at spawnPos with rotation
         GameObject newPrefabTarget2;
-        for(int i =0; i<numberBat; i++)
+        Vector3 spawnPos = new Vector3(Random.Range(right, left), Random.Range(top, bot), 0);
+        if (spawnPos.x < Camera.main.transform.position.x) // Nếu vị trí spawn nằm bên trái màn hình
         {
-            Vector3 spawnPos = new Vector3(Random.Range(right, left), Random.Range(top, bot), 0);
-            if (spawnPos.x < 0) // Nếu vị trí spawn nằm bên trái màn hình
-            {
-                newPrefabTarget2 = Instantiate(prefabLeft, spawnPos, Quaternion.identity);
-            }
-            else // Nếu vị trí spawn nằm bên phải màn hình
-            {
-                newPrefabTarget2 = Instantiate(prefabRight, spawnPos, Quaternion.identity);
-            }
-            i++;
+            newPrefabTarget2 = Instantiate(prefab, spawnPos, Quaternion.Euler(0, 180, 0));
+            
         }
-       
+        else // Nếu vị trí spawn nằm bên phải màn hình
+        {
+            newPrefabTarget2 = Instantiate(prefab, spawnPos, Quaternion.identity);
+        }
+
     }
-
-
-
 }
