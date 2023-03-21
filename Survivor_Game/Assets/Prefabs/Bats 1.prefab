@@ -287,8 +287,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa175eecdadf9ff46b9c7079019c7915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
-  pushForce: 10
+  damage: 0
+  pushForce: 15
 --- !u!114 &721591304339248754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -305,6 +305,7 @@ MonoBehaviour:
   currentHealth: 0
   damage: 5
   healthBar: {fileID: 5510354043459725759}
+  ani: {fileID: 8673170118380148324, guid: 2279657fb5857a54aac3657d846866c2, type: 3}
 --- !u!50 &4382732466362394699
 Rigidbody2D:
   serializedVersion: 4

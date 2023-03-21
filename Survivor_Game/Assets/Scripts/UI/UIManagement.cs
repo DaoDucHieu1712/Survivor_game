@@ -18,6 +18,7 @@ public class UIManagement : MonoBehaviour
 {
     public Text scoreText;
     public Text lvText;
+    public Text expText;
     public GameObject gameoverPanel;
     public Button Bullet1;
     public Button Bullet2;
@@ -33,9 +34,23 @@ public class UIManagement : MonoBehaviour
     private int coolDown;
     private int check;
 
+    public AudioSource audioShot;
+    public AudioSource audioBoom;
+    public AudioSource audioTheme;
 
     private PlayerController playerController;
     // Start is called before the first frame update
+
+
+    public void PlayShot()
+    {
+        audioShot.Play();
+    }
+
+    public void PlayeAudioBoom()
+    {
+        audioBoom.Play();
+    }
 
     public void Start()
     {
@@ -48,6 +63,7 @@ public class UIManagement : MonoBehaviour
         Replay.onClick.AddListener(RestartButton);
         MainMenu.onClick.AddListener(MainMenuButton);
         scoreValue = 0;
+        audioTheme.Play();
     }
 
     private void ChangeSkill()
@@ -116,6 +132,22 @@ public class UIManagement : MonoBehaviour
         if (scoreText)
         {
             scoreText.text = text;
+        }
+    }
+
+    public void SetLevelText(string text)
+    {
+        if (lvText)
+        {
+            lvText.text = $"Level : {text}";
+        }
+    }
+
+    public void SetExpText(string text, string maxExp)
+    {   
+        if (expText)
+        {
+            expText.text = $"Exp : {text} / {maxExp}";
         }
     }
 
