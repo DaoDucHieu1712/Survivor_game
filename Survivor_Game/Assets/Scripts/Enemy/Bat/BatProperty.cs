@@ -5,7 +5,7 @@ using UnityEngine;
 public class BatProperty : MonoBehaviour
 {
     // Start is called before the first frame update
-    public float maxHealth = 25;
+    public float maxHealth = 500f;
     public float currentHealth;
     public float damage = 5;
     public HealthBar healthBar;
