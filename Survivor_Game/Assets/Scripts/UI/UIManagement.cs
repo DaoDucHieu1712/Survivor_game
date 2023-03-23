@@ -3,16 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Xml.Serialization;
 using Assets.Scripts.Model;
-
 using Unity.VisualScripting;
-
-using UnityEditor.Timeline.Actions;
-
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.U2D;
 using UnityEngine.UI;
+
 
 public class UIManagement : MonoBehaviour
 {
@@ -122,6 +119,8 @@ public class UIManagement : MonoBehaviour
         if(coolDown == 0 && check == 1)
         {
             Bullet4.GetComponent<Button>().interactable = true;
+            Bullet4.GetComponent<Image>().color = Color.red;
+            txtCoolDown.text = "4";
             CancelInvoke();
         }
     }

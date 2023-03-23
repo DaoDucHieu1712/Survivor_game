@@ -13,7 +13,7 @@ public class EvilBullet : MonoBehaviour
             EvilProperty evil = collision.gameObject.GetComponent<EvilProperty>();
             if (player.currentHealth > 0)
             {
-                player.TakeDamage(4);
+                player.TakeDamage(3);
             }
             Destroy(gameObject);
 

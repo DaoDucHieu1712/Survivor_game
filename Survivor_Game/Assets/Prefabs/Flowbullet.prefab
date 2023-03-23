@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -5171671880810991947}
   - component: {fileID: 167605860926529719}
   - component: {fileID: 446415497390390285}
+  - component: {fileID: -1460952074812419941}
   m_Layer: 0
   m_Name: Flowbullet
   m_TagString: Untagged
@@ -136,3 +137,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14119b019062c814baa3a277b482901f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-1460952074812419941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6007182752966284585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b1345b1fd110d748bb6e4d3c591aeb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  bulletLifeTime: 3

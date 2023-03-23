@@ -246,10 +246,10 @@ GameObject:
   - component: {fileID: 7776850291477627709}
   - component: {fileID: -734023297165082212}
   - component: {fileID: -4308962162962246561}
-  - component: {fileID: 4827625267698850315}
   - component: {fileID: 9209715695060259169}
   - component: {fileID: 4141354844161485192}
   - component: {fileID: -2350025143486723215}
+  - component: {fileID: 5238053992265579503}
   m_Layer: 0
   m_Name: Flower
   m_TagString: Flower
@@ -320,24 +320,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.1148818, y: 0.81655073}
   m_EdgeRadius: 0
---- !u!114 &4827625267698850315
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4296962338409670344}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0945d13ccb11884c81326d7b05c06b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 6007182752966284585, guid: 069d8e7ab25e7ed4eb142615b2a0ecf4, type: 3}
-  fireRate: 2.5
-  bulletSpeed: 5
-  bulletLifetime: 2
-  dame: 5
-  hp: 20
 --- !u!114 &9209715695060259169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -350,7 +332,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efe31bb4cf2f3c3489eae598b4de3816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 10
+  damage: 3
   healthBar: {fileID: 7371549991051891985}
+  ani: {fileID: 8673170118380148324, guid: 2279657fb5857a54aac3657d846866c2, type: 3}
 --- !u!212 &4141354844161485192
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -415,6 +400,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bec85f53b7a7b564d9b5e12729c25ae2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5238053992265579503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4296962338409670344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4f65a4162d74ac46bc1a57ff6a9b125, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flowerBulletPrefab: {fileID: 6007182752966284585, guid: 069d8e7ab25e7ed4eb142615b2a0ecf4, type: 3}
+  bulletsAmount: 10
+  startAngle: 0
+  endAngle: 360
+  involkTime: 1
 --- !u!1 &5362124645817597210
 GameObject:
   m_ObjectHideFlags: 0

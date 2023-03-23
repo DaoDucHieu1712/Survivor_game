@@ -55,8 +55,7 @@ public class BatProperty : MonoBehaviour
             {
                 Instantiate(batSpawner.hpPrefab, transform.position, Quaternion.identity);
             }
-            else // 10% chance to spawn expuntilPrefab
-
+            else
             {
                 Instantiate(batSpawner.expPrefab, transform.position, Quaternion.identity);
             }

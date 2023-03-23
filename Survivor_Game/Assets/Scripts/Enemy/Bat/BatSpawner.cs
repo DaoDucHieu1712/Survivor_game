@@ -20,7 +20,7 @@ public class BatSpawner : MonoBehaviour
        
         // Get the current level of the player
         float playerLevel = player.Lv;
-        spawnInterval = 5f - playerLevel * 0.2f;
+        float spawnInterval = 10f - playerLevel * 0.2f;
         timeSinceLastSpawn += Time.deltaTime;
         if (timeSinceLastSpawn >= spawnInterval)
         {
