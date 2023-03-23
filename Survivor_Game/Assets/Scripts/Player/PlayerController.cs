@@ -60,15 +60,15 @@ public class PlayerController : MonoBehaviour
                 break;
             case 2:
                 Debug.Log("2");
-                weapon = new Weapon(DanNo, playerInfo.dame, 1f, 10f);
+                weapon = new Weapon(DanNo, playerInfo.dame, 1f, 11f);
                 break;
             case 3:
                 Debug.Log("3");
-                weapon = new Weapon(DanXuyen, playerInfo.dame / 5, 0.5f, 5f);
+                weapon = new Weapon(DanXuyen, playerInfo.dame / 6, 0.7f, 8f);
                 break;
             case 4:
                 Debug.Log("4");
-                weapon = new Weapon(DanUltimate, playerInfo.dame * 3, 1.5f, 10f);
+                weapon = new Weapon(DanUltimate, playerInfo.dame * 8, 1f, 15f);
                 break;
         }
         SetProperty(weapon);

@@ -72,7 +72,7 @@ public class TriggerBullet : MonoBehaviour {
     private void HandlerDanThuong(float dame, GameObject enemy)
     {
         DameEnemy(dame, enemy);
-
+        Destroy(gameObject);
     }
 
     public void HandlerDanNo(float dame, GameObject enemy)

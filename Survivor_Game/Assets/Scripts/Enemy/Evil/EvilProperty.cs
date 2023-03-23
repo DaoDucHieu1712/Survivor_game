@@ -13,6 +13,8 @@ public class EvilProperty : MonoBehaviour
     public float currentHealth;
     public float damage;
     public EvilHealthBar healthBar;
+    public GameObject ani;
+
     public float MaxHealth { get => maxHealth; set => maxHealth = value; }
     public float CurrentHealth { get => currentHealth; set => currentHealth = value; }
     public float Damage { get => damage; set => damage = value; }
@@ -57,7 +59,7 @@ public class EvilProperty : MonoBehaviour
             // Randomly select a prefab to spawn (1 in 3 chance for each type)
 
             float rand = Random.value;
-            if (rand < 0.4f) // 40% chance to spawn hpPrefab
+            if (rand < 0.2f) // 40% chance to spawn hpPrefab
             {
                 Instantiate(evilSpawnController.hpPrefab, transform.position, Quaternion.identity);
             }
@@ -65,6 +67,9 @@ public class EvilProperty : MonoBehaviour
             {
                 Instantiate(evilSpawnController.expPrefab, transform.position, Quaternion.identity);
             }
+            GameObject boom = Instantiate(ani, transform.position, Quaternion.identity);
+            uIManagement.PlayeAudioBoom();
+            Destroy(boom, 2f);
         }
     }
 

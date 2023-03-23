@@ -339,7 +339,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 3060508846967047555, guid: 3918f4c9fdba5104f8dd47b6a4a6e7d6, type: 3}
-  speed: 5
+  speed: 2
 --- !u!70 &-659543980869533009
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

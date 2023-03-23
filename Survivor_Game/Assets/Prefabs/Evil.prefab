@@ -357,8 +357,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 30
   currentHealth: 0
-  damage: 4
+  damage: 3
   healthBar: {fileID: 6243276199137176733}
+  ani: {fileID: 8673170118380148324, guid: 2279657fb5857a54aac3657d846866c2, type: 3}
 --- !u!1 &6243276198500253944
 GameObject:
   m_ObjectHideFlags: 0

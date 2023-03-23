@@ -10,7 +10,7 @@ public class PlayerInfomation : MonoBehaviour
 
 	public float dame = 10f;
 	public float hp = 50f;
-	public float exp = 10.825f;
+	public float exp;
 	public float lv = 1;
 	public float currentHealth;
 	public float maxExp = 100;
@@ -63,17 +63,18 @@ public class PlayerInfomation : MonoBehaviour
 			Lv++;
 			MaxExp = (float)(10 * Math.Pow(1.05, lv));
 			Dame = Dame * 1.015f;
-			Hp = Hp * 1.025f;
+			Hp = Hp * 1.03f;
+			healthBar.SetMaxHealth(Hp);
 			Exp = 0;
 		}
 		ui.SetExpText(Math.Floor(Exp).ToString(), Math.Floor(MaxExp).ToString());
 		ui.SetLevelText(Lv.ToString());
-		if(Lv == 6)
+		if(Lv == 4)
 		{
             ui.Bullet2.interactable = true;
             ui.Bullet3.interactable = true;
 		}
-		else if(Lv == 10){
+		else if(Lv == 6){
             ui.Bullet4.interactable = true;
         }
     }

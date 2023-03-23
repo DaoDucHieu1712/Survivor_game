@@ -40,28 +40,28 @@ public class BossController : MonoBehaviour
 
         int randb = Random.Range(1, 4);
         GameObject boss;
-        Vector3 bossBody = new Vector3(2.4f, 2.4f, 0);
+        Vector3 bossBody = new Vector3(2.5f, 2.5f, 0);
         if (randb == 1)
         {
             boss = Instantiate(_bat, targetPos, Quaternion.identity);
-            boss.transform.localScale = new Vector3(1.5f, 1.5f, 0);
+            boss.transform.localScale = new Vector3(3f, 3f, 0);
             boss.GetComponent<BatProperty>().Damage = boss.GetComponent<BatProperty>().Damage * 2;
-            boss.GetComponent<BatProperty>().CurrentHealth = boss.GetComponent<BatProperty>().CurrentHealth * 5;
+            boss.GetComponent<BatProperty>().CurrentHealth = boss.GetComponent<BatProperty>().CurrentHealth * 4;
         }
         else if (randb == 3)
         {
             boss = Instantiate(_flower, targetPos, Quaternion.identity);
             boss.GetComponent<FlowerProperti>().Damage = boss.GetComponent<FlowerProperti>().Damage * 2;
-            boss.GetComponent<FlowerProperti>().MaxHealth = boss.GetComponent<FlowerProperti>().MaxHealth * 6;
+            boss.GetComponent<FlowerProperti>().MaxHealth = boss.GetComponent<FlowerProperti>().MaxHealth * 7;
             boss.transform.localScale = bossBody;
             //StartCoroutine(MoveToPlayer(_flower));
         }
         else if (randb == 2)
         {
             boss = Instantiate(_evil, targetPos, Quaternion.identity);
-            boss.transform.localScale = new Vector3(0.5f, 0.5f, 0);
+            boss.transform.localScale = new Vector3(1.1f, 1.1f, 0);
             boss.GetComponent<EvilProperty>().Damage = boss.GetComponent<EvilProperty>().Damage * 3;
-            boss.GetComponent<EvilProperty>().MaxHealth = boss.GetComponent<EvilProperty>().MaxHealth * 4;
+            boss.GetComponent<EvilProperty>().MaxHealth = boss.GetComponent<EvilProperty>().MaxHealth * 5;
 
         }
 

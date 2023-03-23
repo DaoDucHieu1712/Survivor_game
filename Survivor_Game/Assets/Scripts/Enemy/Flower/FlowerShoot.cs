@@ -34,7 +34,7 @@ public class FlowerShoot : MonoBehaviour
 
 	void Update()
 	{
-		target = GameObject.FindGameObjectWithTag("Player").transform;
+		 target = GameObject.FindGameObjectWithTag("Player").transform;
 		 playerLevel = player.GetComponent<PlayerInfomation>().lv;
 	}
 
